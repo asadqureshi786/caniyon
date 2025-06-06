@@ -1,0 +1,44 @@
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import { Container } from 'react-bootstrap';
+import { Parallax } from 'react-parallax';
+
+// images
+import cover from '../assets/img/banner.jpg'
+
+export default function Banner() {
+    return (
+        <>
+         <Parallax bgImage={cover} strength={400}>
+            <div className="banner_section text-center" style={{ background: `url(${''})` }} >
+                  <div style={{ height: 500 }}>
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%,-50%)',
+            color: 'white',
+            fontSize: '2em',
+            fontWeight: 'bold'
+          }}>
+            Parallax Nature
+          </div>
+        </div>
+                <Container>
+                    <Row className='justify-content-center' >
+                        <Col md={8}>
+                            <div className="bigB">
+                                <p className="main_txt white"><span className="primaryCol">Innovative</span> Design</p>
+                                <p className="main_txt white">for Your <span className="primaryCol">Business!</span>!</p>
+                            </div>
+                            <p className="desc fw5 f14 mt-3 white">Top-tier design solutions for tech firms and emerging businesses. Ditch the typical aesthetic methods and<br></br> embrace efficiency and originality. Coming soon.</p>
+                            <Button className='mt-3' >Learn More</Button>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+            </Parallax>
+        </>
+    )
+}
