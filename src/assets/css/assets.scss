@@ -1,18 +1,23 @@
 
 // SCSS Variables
-$white:rgb(204, 204, 204);
+$white:#FFFFFF;
+$lightCol:#A3A3A3;
 $primaryCol:#26A8F9;
+$border1:#2b2b2b;
+$shadow:0px 0px 0px 1px var(--token-b1990ab1-c2a9-42b4-af29-b4d56f0b04db, rgb(38, 38, 38));
 
 
 
 // CSS Variables
 .white{color:$white;}
-.primaryCol{color:$primaryCol;}
-
+.lightCol{color:$lightCol;}
+.primaryCol{color:$primaryCol;};
+.shadow{box-shadow: $shadow};
+.border1{border-color: $border1;}
 
 // Button
 .btn{
-    padding:14px 50px!important;
+    padding:12px 45px!important;
     font-size: 13.5px!important;
     border-radius: 100px!important;
     border:none!important;
