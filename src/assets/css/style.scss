@@ -11,6 +11,73 @@ body {
     background: #000 !important;
 }
 
+.container {
+    // margin: 0px 50px!important;
+}
+
+.grayScale {
+    filter: grayscale(100%)
+}
+
+.sticky_section {
+    background-attachment: fixed !important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.onTop {
+    position: relative;
+    z-index: 99;
+    background: #0D0D0D;
+    border: 1px solid #0D0D0D;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: -2.1px;
+        left: -2.1px;
+        right: -2.1px;
+        bottom: -2.1px;
+        border: 5px solid #0D0D0D;
+        // border:2px solid red;
+    }
+
+}
+
+.form-group {
+    label {
+        color: $lightCol;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .form-control {
+        background: rgb(21, 21, 21);
+        border: none;
+        box-shadow: $shadow;
+        color: $white;
+        font-size: 13px;
+
+        &:focus {
+            color: $white;
+            background: rgb(21, 21, 21);
+            ;
+            box-shadow: $shadow;
+            outline: none;
+        }
+    }
+}
+
+.form_list {
+    .row {
+        gap: 20px;
+    }
+}
+
+
+
 .subHead {
     color: $primaryCol;
     border: 1px solid rgb(38, 38, 38);
@@ -40,13 +107,13 @@ body {
     text-transform: uppercase;
 }
 
-.subText{
+.subText {
     font-weight: 500;
     font-size: 14px;
-    color:$lightCol;
+    color: $lightCol;
 }
 
-.maxWith{
+.maxWith {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -92,7 +159,39 @@ body {
                 }
             }
         }
+
+        &.active {
+            position: fixed;
+            z-index: 99;
+            bottom: 15px;
+            left: 50%;
+            width: 700px;
+            transform: translateX(-50%);
+            border-radius: 100px;
+            padding: 15px 35px;
+            background-color: rgba(29, 29, 29, 0.900);
+            box-shadow: $shadow;
+            animation-name: headerAnime;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            @keyframes headerAnime {
+                0% {
+                    transform: translate(-50%, 100px);
+                }
+                100% {
+                    transform: translate(-50%, 0px);
+                }
+
+            }
+
+            img {
+                width: 150px;
+            }
+        }
     }
+
+
 
     // Banner SASS Start
     .banner_section {
@@ -106,8 +205,8 @@ body {
 
         .bigB {
             p {
-              line-height: 100px;
-              font-size: 80px;
+                line-height: 100px;
+                font-size: 80px;
             }
         }
     }
@@ -115,44 +214,51 @@ body {
     // Banner SASS End
 
     // Package SASS Start
-    .package{
-        .card{
+    .package {
+        .card {
             background-color: transparent;
-            border: 1px solid ;
+            border: 1px solid;
             box-shadow: '';
             border-radius: 25px;
             padding: 40px;
         }
-        .subHead{
+
+        .subHead {
             position: relative;
-            top:18px;
+            top: 18px;
             z-index: 1;
         }
-        .package_card{
-            .price{
+
+        .package_card {
+            .price {
                 border-bottom: 1px solid $border1;
             }
-            ul{
+
+            ul {
                 list-style: none;
                 padding: 0px;
                 margin: 10px 0px 30px 0px;
-                li{
+
+                li {
                     display: flex;
                     align-items: center;
-                    gap:10px;
+                    gap: 10px;
                     margin-bottom: 10px;
-                    &:last-child{
+
+                    &:last-child {
                         margin-bottom: 0px;
                     }
-                    .icon{                    
+
+                    .icon {
                         svg {
                             width: 20px;
                             height: 20px;
-                            color:$primaryCol;
+                            color: $primaryCol;
                         }
                     }
-                    .text{
-                        color:$lightCol;
+
+                    .text {
+                        color: $lightCol;
                         font-size: 14px;
                         font-weight: 600;
                     }
@@ -160,34 +266,39 @@ body {
             }
         }
     }
+
     // Package SASS End
 
     // Features Card SASS Start
-    .features_card{
-        .item{
+    .features_card {
+        .item {
             box-shadow: $shadow;
             border-radius: 20px;
             padding: 20px;
             background: rgb(21, 21, 21);
-            .icon{
-                svg{
+
+            .icon {
+                svg {
                     height: 52px;
                     width: 52px;
-                    color:$primaryCol;
+                    color: $primaryCol;
                 }
             }
-            .title{
+
+            .title {
                 margin-top: 18px;
                 font-size: 26px;
                 font-weight: 700;
                 text-transform: uppercase;
-                color:$white;
+                color: $white;
             }
-            .last_icon{
+
+            .last_icon {
                 display: flex;
                 justify-content: end;
                 margin-top: 20px;
-                svg{
+
+                svg {
                     height: 35px;
                     width: 35px;
                     color: $white;
@@ -195,49 +306,310 @@ body {
             }
         }
     }
+
     // Features Card SASS End
 
     // ALl Teams SASS Start
-    .all_teams{
-        .box{
+    .all_teams {
+        .box {
             box-shadow: $shadow;
             border-radius: 20px;
             overflow: hidden;
-            img{
+
+            img {
                 width: 100%;
                 height: 300px;
                 object-fit: cover;
                 transition: 0.2s all linear;
                 filter: grayscale(100%);
-                &:hover{
+
+                &:hover {
                     filter: grayscale(0%);
                 }
             }
-            .info{
+
+            .info {
                 margin-top: 20px;
                 text-align: center;
-                .name{
+
+                .name {
                     text-transform: uppercase;
                     font-weight: 700;
                     font-size: 22px;
                 }
-                .designation{
+
+                .designation {
                     font-size: 15px;
                 }
             }
         }
     }
+
     // ALl Teams SASS End
 
     // Portfolio Card SASS Start
-    .protfolio_card{
+    .protfolio_card {
         box-shadow: $shadow;
-        border:1px solid $border1;
+        border: 1px solid $border1;
         border-radius: 20px;
         background: rgb(21, 21, 21);
-        
 
+        img {
+            border-radius: 20px;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
     }
+
     // Portfolio Card SASS End
 
+    // Process Section SASS Start
+    .stay_process {
+        .box {
+            box-shadow: $shadow;
+            border-radius: 20px;
+            padding: 30px;
+            background-color: rgb(21, 21, 21);
+
+            img {
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                box-shadow: $shadow;
+            }
+
+            .sideList {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+
+                li {
+                    margin-bottom: 15px;
+                    padding-bottom: 22px;
+                    border-bottom: 1px solid $border1;
+
+                    &:last-child {
+                        padding-bottom: 0px;
+                        margin-bottom: 0px;
+                        border-bottom: 0px;
+                    }
+
+                    .heading {
+                        font-size: 26px;
+                        color: $white;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    // Process Section SASS End
+
+    // Services Section SASS Start
+    .services_div {
+        .subHead {
+            margin: unset;
+        }
+    }
+
+    .service_list {
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+
+            li {
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                .items {
+                    box-shadow: $shadow;
+                    padding: 20px;
+                    border-radius: 20px;
+                    position: relative;
+
+                    .icon {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+
+                        svg {
+                            color: $primaryCol;
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Services Section SASS End
+
+    // FAQ SASS Start
+    .faq_list {
+        .accordion {
+            .accordion-item {
+                border: 1px solid $border1;
+
+                .accordion-header {
+                    button {
+                        background: rgb(21, 21, 21);
+                        border: none;
+                        box-shadow: $shadow;
+                        color: $white;
+                        justify-content: space-between;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        font-size: 14px;
+
+                        &::after {
+                            content: none;
+                        }
+
+                        svg {
+                            color: $primaryCol;
+                            width: 17px;
+                            height: 17px;
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    background: rgb(21, 21, 21);
+                    color: $lightCol;
+                    font-size: 13.5px;
+                }
+            }
+        }
+    }
+
+    // FAQ SASS End
+
+    // Contact Us SASS Start
+    .contact_us {
+        .subHead {
+            margin: unset !important;
+        }
+
+        .right_sight {
+            ul {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+    }
+
+    // Contact Us SASS End
+
+    // Footer SASS Start
+    .footer {
+        padding: 100px 0px 50px 0px;
+        border-radius: 100px 100px 0px 0px;
+        background: rgb(21, 21, 21);
+        margin-top: 100px;
+
+        p {
+            margin-bottom: 0px;
+        }
+
+        .first {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .r_side {
+            img {
+                width: 500px;
+            }
+
+            .menu {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                .link {
+                    color: $white;
+                    text-decoration: none;
+                    transition: 0.2s all linear;
+                    font-size: 13px;
+                    margin-top: 30px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: $primaryCol;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .l_side {
+            min-width: 250px;
+
+            .box {
+                border-radius: 20px;
+                box-shadow: $shadow;
+
+                .top {
+                    padding: 20px;
+                    // padding-bottom: 0px;
+                    border-bottom: 1px solid $border1;
+                }
+
+                .bottom {
+                    padding: 20px;
+
+                    .social {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .link {
+                            svg {
+                                color: gray;
+                                width: 22px;
+                                height: 22px;
+                            }
+                        }
+                    }
+                }
+
+                .title {
+                    font-size: 15px;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    // Footer SASS End
+
+}
+
+
+@media (min-width: 1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1450px!important;
+    }
 }

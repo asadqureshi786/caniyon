@@ -1,10 +1,36 @@
 import React from 'react'
 import { PiWarningCircleLight } from "react-icons/pi";
+import { Row, Col } from 'react-bootstrap'
+
+// Images
+import global from '../assets/img/global.jpg'
+import pixcel from '../assets/img/pixcel.jpg'
+import urban from '../assets/img/urban.jpg'
 
 export default function Portfolio() {
+    let portfolio = [
+        {
+            heading: 'GLOBAL CONNECT',
+            text: 'Global Connect, an international logistics firm, needed a digital transformation. We created an intuitive website with real-time tracking features, developed a mobile app for customer convenience, and launched a targeted email marketing campaign to enhance their customer engagement.',
+            service: 'Web Development, Mobile App Development, Email Marketing.',
+            img: global,
+        },
+        {
+            heading: 'PIXEL STUDIO',
+            text: 'Pixel Studio, a renowned creative agency, wanted a complete overhaul of their brand identity. We delivered a vibrant new logo, a cohesive brand strategy, and an engaging website that showcases their portfolio and services seamlessly.',
+            service: 'Branding & Identity, Web Design, UX/UI Design.',
+            img: pixcel,
+        },
+        {
+            heading: 'URBAN GREEN',
+            text: 'Urban Green is a leading sustainable urban farming company. We revamped their digital presence with a modern, eco-friendly website, developed an online marketplace, and provided comprehensive digital marketing strategies to boost their online visibility.',
+            service: 'Website Development, E-Commerce Solutions, Digital Marketing.',
+            img: urban,
+        }
+    ]
     return (
         <>
-            <div className="portfolio maxWith  pb-1 mt-5 pt-5">
+            <div className="portfolio maxWith  pb-1 mt-5 pt-5 mb-4">
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Portfolio</span>
@@ -17,18 +43,30 @@ export default function Portfolio() {
                     </p>
                 </div>
             </div>
-
-            <div className="protfolio_card">
-                <Row>
-                    <Col md={6}></Col>
-                    <Col md={6}>
-                        <div className="sideImage">
-                            
-                        </div>
-                    </Col>
-                </Row>
-            </div>
-
+            {
+                portfolio.map((item) => (
+                    <div className="protfolio_card sticky_section">
+                        <Row className='align-items-center p-5' >
+                            <Col md={6}>
+                                <div className="content sticky_section">
+                                    <h4 class="title white f40 fw7" >{item.heading}</h4>
+                                    <p className="subText mt-4">{item.text}</p>
+                                    <div className="d-flex gap-1 pt-2 pb-2 align-align-items-center">
+                                        <p className='subText'>Our Services:</p>
+                                        <p className='primaryCol'>{item.service}</p>
+                                    </div>
+                                    <button className='btn btn-primary bigB' >Check it out!</button>
+                                </div>
+                            </Col>
+                            <Col md={6}>
+                                <div className="sideImage">
+                                    <img src={item.img} className='grayScale img-fluid' ></img>
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
+                ))
+            }
         </>
     )
 }

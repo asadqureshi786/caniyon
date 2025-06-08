@@ -5,6 +5,11 @@ import Offers from "./components/Offers.jsx";
 import Featues from "./components/Featues.jsx";
 import Teams from "./components/Teams.jsx";
 import Portfolio from "./components/Portfolio.jsx";
+import Process from "./components/Process.jsx";
+import Services from "./components/Services.jsx";
+import Contact from "./components/Contact.jsx";
+import Faq from "./components/Faq.jsx";
+import Footer from "./components/Footer.jsx";
 import { Container } from "react-bootstrap";
 function App() {
 
@@ -20,8 +25,15 @@ function App() {
             <Offers />
             <Featues/>
             <Teams/>
+            <Services/>
             <Portfolio/>
+            <div className="onTop">
+              <Contact className="onTop" />
+            <Faq className="onTop" />
+            <Process className="onTop" />
+            </div>
           </Container>
+            <Footer/>
         </div>
       </div>
     </>
