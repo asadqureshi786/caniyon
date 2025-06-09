@@ -12,7 +12,7 @@ export default function Faq() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >FAQs</span>
                     </div>
-                    <p className="bigT white my-2">Baffled? We'll assist!</p>
+                    <p className="bigT white my-2">Baffled? We'll <span class="sm_unique" >assist!</span></p>
                     <p className="text white subText">
                         This is a compilation of common inquiries about our offerings, crafted to aid you in your purchasing decisions.
                     </p>
@@ -20,8 +20,10 @@ export default function Faq() {
             </div>
 
             <div className="faq_list">
-                <Row>
-                    <Col md={4}>
+               <Row className='justify-content-center' >
+                <Col md={7} >
+                 <Row className='gap-2' >
+                    <Col md={12}>
                         <Accordion>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header className='d-flex align-items-center justify-content-between' >
@@ -45,7 +47,7 @@ export default function Faq() {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md={4}>
+                    <Col md={12}>
                         <Accordion>
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header className='d-flex align-items-center justify-content-between' >
@@ -69,7 +71,7 @@ export default function Faq() {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md={4}>
+                    <Col md={12}>
                         <Accordion>
                             <Accordion.Item eventKey="2">
                                 <Accordion.Header className='d-flex align-items-center justify-content-between' >
@@ -94,6 +96,8 @@ export default function Faq() {
                         </Accordion>
                     </Col>
                 </Row>
+                </Col>
+               </Row>
             </div>
         </>
     )

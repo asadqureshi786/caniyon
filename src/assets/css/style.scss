@@ -1,12 +1,56 @@
 @import './assets.scss';
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+$uniqueFont : "Bricolage Grotesque", sans-serif;
 *,
 html,
 body {
     font-family: "Wix Madefor Display", sans-serif;
 }
 
+.unique{
+    position: relative;
+    color:$primaryCol;
+    font-family: $uniqueFont;
+    font-size: 70px;
+    font-weight: 600;
+}
+.sm_unique{
+    color:$primaryCol!important;
+    font-family: $uniqueFont;
+    font-size: 38px;
+}
+
+.underline-svg {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  width: 100%;
+  height: 20px;
+}
+
+.underline-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.underline-svg path {
+ stroke: #2196f3;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: drawLine 5s ease forwards;
+  animation-fill-mode: forwards; /* important to keep it visible */
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 body {
     background: #000 !important;
 }
@@ -20,7 +64,7 @@ body {
 }
 
 .sticky_section {
-    background-attachment: fixed !important;
+    // background-attachment: fixed !important;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -41,8 +85,9 @@ body {
         right: -2.1px;
         bottom: -2.1px;
         border: 5px solid #0D0D0D;
-        // border:2px solid red;
+        transition: 0.2s all linear;
     }
+
 
 }
 
@@ -88,13 +133,13 @@ body {
     font-size: 15px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     font-weight: 500;
     background-color: #0D0D0D;
 
     svg {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -109,7 +154,7 @@ body {
 
 .subText {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     color: $lightCol;
 }
 
@@ -131,6 +176,8 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 25px 0px;
+        position: relative;
+        z-index: 1;
 
         .logo {
             img {
@@ -194,15 +241,42 @@ body {
 
 
     // Banner SASS Start
+    .topBar{
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    
+        &::before{
+            background: url('../img/banner.jpg');
+            position: absolute;
+            background-attachment: fixed!important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content:'';
+            top:0;
+            left: 0;
+            right: 0;
+            bottom:0;
+            width: 100%;
+            height: 100%;
+            transition: 0.2s all linear;
+        }
+            &.active{
+        &::before{
+            transform: scale(1.2);
+        }
+    }
+    }
     .banner_section {
         width: 100%;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        padding: 60px 0px 140px 0px;
-        background-attachment: fixed !important;
-        position: sticky;
-        top: 0;
-
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+            display: flex;
+        justify-content: center;
+        align-items: center;
         .bigB {
             p {
                 line-height: 100px;
@@ -614,6 +688,6 @@ body {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1350px!important;
+        max-width: 1300px!important;
     }
 }

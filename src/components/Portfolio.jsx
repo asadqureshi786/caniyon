@@ -35,7 +35,7 @@ export default function Portfolio() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Portfolio</span>
                     </div>
-                    <p className="bigT white my-2">BEHAVIOR SHOWS WORTH</p>
+                    <p className="bigT white my-2">BEHAVIOR SHOWS <span class="sm_unique" >WORTH</span> </p>
                     <p className="text white subText">
                         We specialize in transforming businesses into extraordinary brands.
                         We're passionate about continuing our mission. Explore our stellar

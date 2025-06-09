@@ -12,13 +12,10 @@ export default function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log("Running")
             if (scrollY > 200) {
-                console.log("True");
                 setScrolled(true);
             } else {
                 setScrolled(false);
-                console.log("False");
             }
         }
 

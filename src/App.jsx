@@ -1,4 +1,4 @@
-import Header from "./components/Header.jsx";
+// import Header from "./components/Header.jsx";
 import Banner from "./components/Banner.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 import Offers from "./components/Offers.jsx";
@@ -17,7 +17,7 @@ function App() {
     <>
 
       <div className="main_home_page">
-        <Header />
+      
         <Banner />
         <div className="upper_layer">
           <Container>

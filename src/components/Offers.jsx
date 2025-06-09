@@ -34,7 +34,7 @@ export default function Offers() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Services Pricing</span>
                     </div>
-                    <p className="bigT white my-2">OUR OFFERS</p>
+                    <p className="bigT white my-2">OUR <span class="sm_unique" >OFFERS</span> </p>
                     <p className="text white subText">
                         We offer a range of inventive solutions tailored to your needs, promising exceptional caliber and value. Our pricing framework is designed to be transparent and affordable, presenting comprehensible packages for all budgets.
 

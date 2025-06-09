@@ -11,7 +11,7 @@ export default function Featues() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Included Features</span>
                     </div>
-                    <p className="bigT white my-2">EACH STAGE IS SEIZED
+                    <p className="bigT white my-2">EACH STAGE IS <span class="sm_unique" >SEIZED</span>
                     </p>
                     <p className="text white subText">
                         Your revamped store will possess the many impressive attributes and powerful tools that turn spectators into buyers, maintaining an impeccable aesthetic and functionality.

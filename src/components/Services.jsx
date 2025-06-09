@@ -63,7 +63,7 @@ export default function Services() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >The Process</span>
                     </div>
-                    <p className="bigT white my-2">STAY STREAMLINED, YES?</p>
+                    <p className="bigT white my-2">STAY STREAMLINED, <span class="sm_unique" >YES?</span></p>
                     <p className="text white subText">
                         From start to finish, our work process is as simple as they come. But the journey is always magic!
                     </p>
@@ -79,7 +79,7 @@ export default function Services() {
                                     <div class="items">
                                         <span className="count primaryCol f20">{item.count}</span>
                                         <h4 className='white fw7 f22 mt-2' >{item.title}</h4>
-                                        <p className="lightCol f14">{item.text}</p>
+                                        <p className="lightCol mb-0 f13">{item.text}</p>
                                         <span className='icon'>{item.icon}</span>
                                     </div>
                                 </li>

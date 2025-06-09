@@ -14,7 +14,7 @@ export default function Contact() {
                             <div className="subHead">
                                 <PiWarningCircleLight /><span className='text' >Find Us</span>
                             </div>
-                            <p className="bigT white my-2">Let'Get In Touch</p>
+                            <p className="bigT white my-2">Let'Get In <span class="sm_unique" >Touch</span> </p>
                             <p className="text white subText">Contact us for more information or assistance.</p>
                         </div>
                     </div>
