@@ -78,8 +78,8 @@ export default function Services() {
                                 <li>
                                     <div class="items">
                                         <span className="count primaryCol f20">{item.count}</span>
-                                        <h4 className='white fw7 f26 mt-2' >{item.title}</h4>
-                                        <p className="subText">{item.text}</p>
+                                        <h4 className='white fw7 f22 mt-2' >{item.title}</h4>
+                                        <p className="lightCol f14">{item.text}</p>
                                         <span className='icon'>{item.icon}</span>
                                     </div>
                                 </li>

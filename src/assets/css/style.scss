@@ -85,7 +85,7 @@ body {
     margin: 0 auto;
     width: fit-content;
     padding: 5px 15px;
-    font-size: 16px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -100,7 +100,7 @@ body {
 
 .bigT {
     background-attachment: fixed !important;
-    font-size: 50px;
+    font-size: 35px;
     margin-bottom: 0px;
     letter-spacing: -2px;
     font-weight: 700;
@@ -109,7 +109,7 @@ body {
 
 .subText {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     color: $lightCol;
 }
 
@@ -152,7 +152,7 @@ body {
                     .menu_item {
                         text-decoration: none;
                         color: $white;
-                        font-size: 14px;
+                        font-size: 13px;
                         font-weight: 600;
                         text-transform: uppercase;
                     }
@@ -206,7 +206,7 @@ body {
         .bigB {
             p {
                 line-height: 100px;
-                font-size: 80px;
+                font-size: 65px;
             }
         }
     }
@@ -220,7 +220,7 @@ body {
             border: 1px solid;
             box-shadow: '';
             border-radius: 25px;
-            padding: 40px;
+            padding: 30px;
         }
 
         .subHead {
@@ -287,7 +287,7 @@ body {
 
             .title {
                 margin-top: 18px;
-                font-size: 26px;
+                font-size: 20px;
                 font-weight: 700;
                 text-transform: uppercase;
                 color: $white;
@@ -384,6 +384,7 @@ body {
                 margin: 0px;
                 padding: 0px;
                 list-style: none;
+                padding-left: 20px;
 
                 li {
                     margin-bottom: 15px;
@@ -397,9 +398,12 @@ body {
                     }
 
                     .heading {
-                        font-size: 26px;
+                        font-size: 22px;
                         color: $white;
                         font-weight: 700;
+                    }
+                    .subText{
+                        font-size: 13.7px;
                     }
                 }
             }
@@ -441,8 +445,8 @@ body {
 
                         svg {
                             color: $primaryCol;
-                            width: 40px;
-                            height: 40px;
+                            width: 30px;
+                            height: 30px;
                         }
                     }
                 }
@@ -541,7 +545,7 @@ body {
                     color: $white;
                     text-decoration: none;
                     transition: 0.2s all linear;
-                    font-size: 13px;
+                    font-size: 12px;
                     margin-top: 30px;
                     text-transform: uppercase;
                     font-weight: 500;
@@ -578,15 +582,15 @@ body {
                         .link {
                             svg {
                                 color: gray;
-                                width: 22px;
-                                height: 22px;
+                                width: 20px;
+                                height: 20px;
                             }
                         }
                     }
                 }
 
                 .title {
-                    font-size: 15px;
+                    font-size: 14px;
                     margin-bottom: 12px;
                 }
 
@@ -610,6 +614,6 @@ body {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1450px!important;
+        max-width: 1350px!important;
     }
 }

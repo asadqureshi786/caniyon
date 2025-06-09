@@ -49,7 +49,7 @@ export default function Portfolio() {
                         <Row className='align-items-center p-5' >
                             <Col md={6}>
                                 <div className="content sticky_section">
-                                    <h4 class="title white f40 fw7" >{item.heading}</h4>
+                                    <h4 class="title white f30 fw7" >{item.heading}</h4>
                                     <p className="subText mt-4">{item.text}</p>
                                     <div className="d-flex gap-1 pt-2 pb-2 align-align-items-center">
                                         <p className='subText'>Our Services:</p>

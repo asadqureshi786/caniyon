@@ -50,15 +50,15 @@ export default function Offers() {
                         packageList.map((item) => (
                             <Col md={4}>
                                 <Card className='package_card'>
-                                    <h5 className='white f24 fw7 title text-uppercase' >{item.name}</h5>
-                                    <p className="text subText white">{item.subText}</p>
-                                    <p className="price f50 white fw7">${item.price}</p>
+                                    <h5 className='white f20 fw7 title text-uppercase' >{item.name}</h5>
+                                    <p className="text lightCol f14 white">{item.subText}</p>
+                                    <p className="price f35 white fw7">${item.price}</p>
                                     <ul className="list_item">
                                         {
                                             item.services.map((service)=>(
                                                 <li className="item">
                                                     <span className="icon"><IoIosCheckmarkCircleOutline /></span>
-                                                    <span className="text white">{service}</span>
+                                                    <span className="text  white">{service}</span>
                                                 </li>
                                             ))
                                         }
