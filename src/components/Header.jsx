@@ -40,16 +40,16 @@ export default function Header() {
                     <div className={`menu ${showMenu ? 'showMenu' : '' }`}>
                         <ul>
                             <li>
-                                <a href="" className="menu_item">About</a>
+                                <a href="#aboutUs" className="menu_item">About</a>
                             </li>
                             <li>
-                                <a href="" className="menu_item">Service</a>
+                                <a href="#services" className="menu_item">Service</a>
                             </li>
                             <li>
-                                <a href="" className="menu_item">Work</a>
+                                <a href="#protfolio" className="menu_item">Work</a>
                             </li>
                             <li>
-                                <a href="" className="menu_item">Contact</a>
+                                <a href="#contact" className="menu_item">Contact</a>
                             </li>
                         </ul>
                     </div>

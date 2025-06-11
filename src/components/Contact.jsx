@@ -7,7 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 export default function Contact() {
     return (
         <>
-            <Row className='pb-1 mt-5 pt-5 mb-4 justify-content-center' >
+            <Row className='pb-1 mt-5 pt-5 mb-4 justify-content-center' id="contact" >
                 <Col md={6}>
                     <div className="contact_us">
                         <div className="text-center">

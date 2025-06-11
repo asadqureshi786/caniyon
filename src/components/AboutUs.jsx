@@ -4,8 +4,8 @@ import { PiWarningCircleLight } from "react-icons/pi";
 
 export default function AboutUs() {
     return (
-        <>
-            <div className="about_us maxWith py-3">
+        <> 
+            <div id="aboutUs" className="about_us maxWith py-3">
                <div className="text-center my-5">
                  <div className="subHead">
                     <PiWarningCircleLight /><span className='text'>About Us</span>
