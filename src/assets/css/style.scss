@@ -543,21 +543,23 @@ body {
 
     // FAQ SASS Start
     .faq_list {
+        
         .border_line {
             border: 1px solid $border1;
             padding: 20px;
             border-radius: 20px;
         }
-
         .accordion {
             .accordion-item {
+                background-color: rgb(21, 21, 21);
                 // border: 1px solid $border1;
                 box-shadow: $shadow;
                 border-radius: 20px;
+                border: none;
 
                 .accordion-header {
                     button {
-                        background: rgb(21, 21, 21);
+                        background: #000;
                         border: none;
                         box-shadow: $shadow;
                         color: $white;
@@ -603,6 +605,12 @@ body {
                 margin: 0px;
             }
         }
+    }
+
+    .form_list {
+        box-shadow: $shadow;
+        border-radius: 20px;
+        padding: 20px;
     }
 
     // Contact Us SASS End
@@ -715,43 +723,300 @@ body {
 // Drag Images SASS Start
 .drag_img {
     position: absolute;
-    top:140px;
-    right:180px;
+    top: 140px;
+    right: 180px;
     z-index: 100;
-    width:150px;
+    width: 150px;
     transition: transform 0.3s ease;
     cursor: grab;
-    &.one{
+
+    &.one {
         animation-name: chilling;
         animation-duration: 2s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-        animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+        animation-timing-function: linear;
 
     }
-    &.twp{
-        top:unset;
+
+    &.twp {
+        top: unset;
         bottom: 0;
         width: 250px;
-        right: 0;
+        left: 0;
+          animation-name: scaling;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
     }
-    &.three{
-        top:-130px;
+
+    &.three {
+        top: 100px;
         right: 0;
-       width: 150px;
+        width: 150px;
     }
 }
+
 @keyframes chilling {
-    to{
+    to {
         transform: translateY(20px);
     }
-    from{
+
+    from {
         transform: translateY(0px);
     }
 }
 
-/* Override to show native mouse cursor */
-html, body, .__react-animated-cursor {
-  cursor: auto !important;
+@keyframes scaling {
+    to {
+        transform: scale(0.8);
+    }
+    
+    from {
+        transform: scale(1);
+    }
 }
+
+/* Override to show native mouse cursor */
+// html, body, .__react-animated-cursor {
+//   cursor: auto !important;
+// }
 // Drag Images SASS End
+
+
+// Mobile Responsive SASS Start
+@media only screen and (max-width: 768px) {
+   .header{
+    .logo{
+        img{
+            width: 150px!important;
+        }
+    }
+    .mobile_toggle{
+        color:$white;
+        svg{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .menu{
+        position: absolute;
+        top:100px;
+        width: 100%;
+        left: 0;
+        height: 0px;
+        transition: 0.2s all linear!important;
+        overflow: hidden;
+        z-index: 99999;
+        ul{
+            border-radius: 24px;
+            transition: 0.2s all linear!important;
+            padding: 35px 0px!important;
+            background:rgb(33 33 33 / 97%);
+            // rgb(33 33 33 / 89%)
+            border:1px solid $border1;
+            box-shadow: $shadow;
+            flex-direction: column;
+        }
+        &.showMenu{
+        transition: 0.2s all linear!important;
+        height: fit-content;
+        overflow: auto;
+    }     
+    }
+    &.active{
+        bottom:0px!important;
+        .logo,.mobile_toggle{
+            display: none!important;
+        }
+        .menu{
+            position: static;
+            height:fit-content;
+            ul{
+                flex-direction: row!important;
+                gap:10px!important;
+                padding: 2px 0px!important;
+                background: none!important;
+                box-shadow: none!important;
+                border: none!important;
+                justify-content: center;
+                .menu_item{
+                    font-size:12px!important;
+                }
+            }
+        }
+    }
+   }
+   .unique{
+    font-size: 33px;
+   }
+   .subText{
+    font-size: 13.5px!important;
+   }
+   .bigT{
+    font-size: 30px;
+   }
+   .sm_unique{
+    font-size: 33px;
+   }
+   .banner_section{
+    .bigB{
+        p{
+            font-size: 30px!important;
+            line-height: 40px!important;
+        }
+    }
+   }
+   .btn{
+    padding: 10px 40px!important;
+   }
+   .package  {
+    .row{
+        gap:15px!important;
+    }
+   }
+   .all_teams{
+    .row{
+        gap:15px!important;
+    }
+   
+    .box{
+        .info{
+            .name{
+                font-size: 18px!important;
+            }
+        }
+        img{
+            height: 200px!important;
+        }
+    }
+   }
+   .protfolio_card {
+    & > .row{
+        padding: 18px!important;
+    }
+    .content {
+        margin-bottom: 20px;
+        & > .d-flex{
+            flex-direction: column;
+            .subText{
+                margin-bottom: 1px;
+            }
+            .primaryCol{
+                font-size: 13.5px;
+            }
+        }
+    }
+   }
+   .stay_process{
+    .box{
+        padding: 18px!important;
+        .sideList{
+            margin-top: 20px!important;
+            padding-left: 0px!important;
+            li{
+                .heading{
+                    font-size: 18px!important;
+                }
+            }
+        }
+    }
+   }
+   .footer{
+    border-radius: 50px 50px 0px 0px!important;
+    padding:80px 0px 53px 0px!important;
+    .first{
+        flex-direction: column;
+        .r_side{
+            img{
+                width: 200px!important;
+            }
+            .menu{
+                flex-direction: column;
+                gap:0px;
+                margin-bottom: 40px;
+            }
+        }
+        .l_side{
+            .box{
+                & > div{
+                   .title{
+                     text-align: center;
+                   }
+                   .d-flex{
+                    justify-content: center!important;
+                }
+            }
+            .social{
+                    justify-content: center!important;
+                }
+            }
+        }
+    }
+    .second{
+        margin-top: 0px!important;
+    }
+   }
+      .drag_img.twp{
+        width: 100px!important;
+    }
+      .drag_img.one{
+        right: 10px;
+        width: 75px !important;
+    }
+     .features_card{
+        & > .row{
+            gap:15px!important;
+        }
+    }
+    .services_div{
+        .subHead{
+            margin:0 auto!important;
+        }
+        .sticky_section {
+            text-align: center!important;
+            .subText {
+                padding:0px!important;;
+                margin:0px!important;
+                margin-bottom: 30px!important;
+            }
+        }
+    }
+    .sticky_section {
+        position: static;
+    }
+    .drag_img.three{
+                width: 60px !important;
+        top: 185px;
+
+    }
+}
+// Mobile Responsive SASS End
+
+
+.scrollUp{
+    position: fixed;
+    bottom: 12px;
+    right: 15px;
+    // background: $primaryCol;
+    border:1px solid $border1;
+    box-shadow: $shadow;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:$white;
+    z-index: 100;
+    border-radius: 100px;
+    transition: 0.2s all linear;
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+.hideScroll{
+    opacity: 0;
+    visibility: hidden;
+}

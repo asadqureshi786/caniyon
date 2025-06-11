@@ -15,7 +15,7 @@ export default function Offers() {
         {
             id: 2,
             name: 'Standard Package',
-            subText: 'Comprehensive branding, website design & marketing.',
+            subText: 'Thorough advertising, website design, and branding.',
             price: '1500',
             services: ['Comprehensive branding', 'Website design', 'Marketing materials', 'SEO optimization', 'Email marketing setup', 'Social media management']
         },

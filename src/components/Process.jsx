@@ -2,10 +2,13 @@ import React from 'react';
 import { PiWarningCircleLight } from "react-icons/pi";
 import {Row,Col} from 'react-bootstrap';
 import bottom from '../assets/img/bottom.jpg'
+            import dropImg from '../assets/img/drop2.png'
+
 export default function Process() {
     return (
         <>
-            <div className="process maxWith  pb-1 mt-5 pt-5 mb-4">
+            <div className="position-relative">
+                   <div className="process maxWith  pb-1 mt-5 pt-5 mb-4">
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >The Process</span>
@@ -40,6 +43,8 @@ export default function Process() {
                         </Col>
                     </Row>
                 </div>
+            </div>
+              <img src={dropImg} className='img-fluid three drag_img'   alt="" />
             </div>
         </>
     )

@@ -12,46 +12,67 @@ import Faq from "./components/Faq.jsx";
 import Footer from "./components/Footer.jsx";
 import { Container } from "react-bootstrap";
 import AnimatedCursor from "react-animated-cursor";
+import { GoArrowUp } from "react-icons/go";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    const scrollBar = () => {
+      if (window.scrollY > 200) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
 
+    window.addEventListener("scroll", scrollBar);
+
+    return () => {
+      window.removeEventListener("scroll", scrollBar);
+    };
+  }, []); 
   return (
     <>
 
       <div className="main_home_page">
-      <AnimatedCursor
-        innerSize={10}
-        outerSize={30}
-        color="0, 150, 255"
-        outerAlpha={0.4}
-        innerScale={1}
-        outerScale={1.5}
-        outerStyle={{
-          border: '2px solid rgba(255, 255, 255, 0.8)',
-          backgroundColor: 'transparent',
-        }}
-        innerStyle={{
-          backgroundColor: 'rgb(255, 255, 255)',
-        }}
-      />
+        <AnimatedCursor
+          innerSize={10}
+          outerSize={30}
+          color="0, 150, 255"
+          outerAlpha={0.4}
+          innerScale={1}
+          outerScale={1.5}
+          outerStyle={{
+            border: '2px solid rgba(255, 255, 255, 0.8)',
+            backgroundColor: 'transparent',
+          }}
+          innerStyle={{
+            backgroundColor: 'rgb(255, 255, 255)',
+          }}
+        />
+          <Banner />
+          <div className="upper_layer">
+            <Container>
+              <AboutUs />
+              <Offers />
+              <Featues/>
+              <Teams/>
+              <Services/>
+              <Portfolio/>
+              <div className="onTop">
+                <Contact className="onTop" />
+              <Faq className="onTop" />
+              <Process className="onTop" />
+              </div>
+            </Container>
+              <Footer/>
+          </div>
 
-        <Banner />
-        <div className="upper_layer">
-          <Container>
-            <AboutUs />
-            <Offers />
-            <Featues/>
-            <Teams/>
-            <Services/>
-            <Portfolio/>
-            <div className="onTop">
-              <Contact className="onTop" />
-            <Faq className="onTop" />
-            <Process className="onTop" />
-            </div>
-          </Container>
-            <Footer/>
-        </div>
+          <div onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className={`scrollUp ${ !scroll ? 'hideScroll' : ''}`}>
+            <GoArrowUp/>
+          </div>
+
       </div>
     </>
   )

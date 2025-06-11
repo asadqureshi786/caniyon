@@ -44,7 +44,6 @@ export default function Contact() {
                                         <label>Message</label>
                                         <textarea rows={6} className='form-control' ></textarea>
                                     </div>
-                                    <label>Message</label>
                                 </Col>
                             </Row>
                         </form>

@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import { IoMenuOutline } from "react-icons/io5";
 
 
 // images
@@ -9,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,7 +34,10 @@ export default function Header() {
                     <a href="#" className='logo' >
                         <img src={Logo} alt="Logo" />
                     </a>
-                    <div className="menu">
+                    <div className='mobile_toggle' onClick={()=>setShowMenu(!showMenu)} >
+                        <IoMenuOutline/>
+                    </div>
+                    <div className={`menu ${showMenu ? 'showMenu' : '' }`}>
                         <ul>
                             <li>
                                 <a href="" className="menu_item">About</a>
