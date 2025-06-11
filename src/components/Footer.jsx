@@ -3,6 +3,7 @@ import Logo from '../assets/img/logo.png'
 import { IoLogoInstagram } from "react-icons/io";
 import { PiTwitterLogoLight, PiLinkedinLogo } from "react-icons/pi";
 
+import dropImg from '../assets/img/drop2.png'
 
 
 import { Container } from 'react-bootstrap'
@@ -48,6 +49,8 @@ export default function Footer() {
                         <p className="lightCol f14">© 2024 Copyright  <span className="ps-1 primaryCol">LoremIpsum</span></p>
                     </div>
                 </Container>
+                            <img src={dropImg} className='img-fluid three drag_img'   alt="" />
+                
             </div>
         </>
     )

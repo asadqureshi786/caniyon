@@ -7,10 +7,10 @@ import { Row, Col } from 'react-bootstrap';
 export default function Contact() {
     return (
         <>
-            <Row className='pb-1 mt-5 pt-5 mb-4' >
+            <Row className='pb-1 mt-5 pt-5 mb-4 justify-content-center' >
                 <Col md={6}>
                     <div className="contact_us">
-                        <div className="text-left">
+                        <div className="text-center">
                             <div className="subHead">
                                 <PiWarningCircleLight /><span className='text' >Find Us</span>
                             </div>
@@ -18,9 +18,7 @@ export default function Contact() {
                             <p className="text white subText">Contact us for more information or assistance.</p>
                         </div>
                     </div>
-                </Col>
-                <Col md={6}>
-                    <div class="form_list">
+                       <div class="form_list">
                         <form>
                             <Row>
                                 <Col md={12}>
@@ -44,7 +42,7 @@ export default function Contact() {
                                 <Col md={12}>
                                     <div className="form-group">
                                         <label>Message</label>
-                                        <textarea className='form-control' ></textarea>
+                                        <textarea rows={6} className='form-control' ></textarea>
                                     </div>
                                     <label>Message</label>
                                 </Col>
@@ -52,6 +50,7 @@ export default function Contact() {
                         </form>
                     </div>
                 </Col>
+            
             </Row>
         </>
     )

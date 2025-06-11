@@ -56,15 +56,15 @@ export default function Services() {
 
     return (
         <>
-         <Row className='pb-1 mt-5 pt-5 mb-4 ' >
-            <Col md={6} className='sticky_section' >
-                   <div className="services_div sticky_section ">
+         <Row className='pb-1 mt-3 pt-5 mb-4 ' >
+            <Col md={6} className='sticky_section'  >
+                   <div className="services_div sticky_section" style={{top:'20px'}} >
                 <div className="text-start sticky_section ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >The Process</span>
                     </div>
                     <p className="bigT white my-2">STAY STREAMLINED, <span class="sm_unique" >YES?</span></p>
-                    <p className="text white subText">
+                    <p className="text white subText pe-5 me-4">
                         From start to finish, our work process is as simple as they come. But the journey is always magic!
                     </p>
                 </div>

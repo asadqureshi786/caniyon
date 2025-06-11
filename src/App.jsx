@@ -11,13 +11,30 @@ import Contact from "./components/Contact.jsx";
 import Faq from "./components/Faq.jsx";
 import Footer from "./components/Footer.jsx";
 import { Container } from "react-bootstrap";
+import AnimatedCursor from "react-animated-cursor";
+
 function App() {
 
   return (
     <>
 
       <div className="main_home_page">
-      
+      <AnimatedCursor
+        innerSize={10}
+        outerSize={30}
+        color="0, 150, 255"
+        outerAlpha={0.4}
+        innerScale={1}
+        outerScale={1.5}
+        outerStyle={{
+          border: '2px solid rgba(255, 255, 255, 0.8)',
+          backgroundColor: 'transparent',
+        }}
+        innerStyle={{
+          backgroundColor: 'rgb(255, 255, 255)',
+        }}
+      />
+
         <Banner />
         <div className="upper_layer">
           <Container>

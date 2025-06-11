@@ -7,6 +7,8 @@ import Header from './Header.jsx';
 
 // images
 import cover from '../assets/img/banner.jpg'
+import drop1 from '../assets/img/drop1.png'
+import drop2 from '../assets/img/drop3.png'
 
 export default function Banner() {
     const [anime,setAnime] = useState(false);
@@ -35,11 +37,13 @@ export default function Banner() {
                                 <p className="main_txt white bigT">for Your <span className="primaryCol unique"><span className="underline-svg"></span>Business!</span></p>
                             </div>
                             <p className="desc subText mt-3" >Top-tier design solutions for tech firms and emerging businesses. Ditch the typical aesthetic methods and<br></br> embrace efficiency and originality. Coming soon.</p>
-                            <Button className='mt-2' >Learn More</Button>
+                            <Button className='mt-2' >Connet</Button>
                         </Col>
                     </Row>
                 </Container>
             </div>
+            <img src={drop1} className='img-fluid one drag_img'   alt="" />
+            <img src={drop2} className='img-fluid twp drag_img'   alt="" />
          </div>
         </>
     )

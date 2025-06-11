@@ -22,7 +22,8 @@ export default function Faq() {
             <div className="faq_list">
                <Row className='justify-content-center' >
                 <Col md={7} >
-                 <Row className='gap-2' >
+                    <div className="border_line">
+                         <Row className='gap-2' >
                     <Col md={12}>
                         <Accordion>
                             <Accordion.Item eventKey="0">
@@ -96,6 +97,7 @@ export default function Faq() {
                         </Accordion>
                     </Col>
                 </Row>
+                    </div>
                 </Col>
                </Row>
             </div>

@@ -1,56 +1,61 @@
 @import './assets.scss';
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
-$uniqueFont : "Bricolage Grotesque", sans-serif;
+$uniqueFont : "Bricolage Grotesque",
+sans-serif;
+
 *,
 html,
 body {
     font-family: "Wix Madefor Display", sans-serif;
 }
 
-.unique{
+.unique {
     position: relative;
-    color:$primaryCol;
+    color: $primaryCol;
     font-family: $uniqueFont;
     font-size: 70px;
     font-weight: 600;
 }
-.sm_unique{
-    color:$primaryCol!important;
+
+.sm_unique {
+    color: $primaryCol !important;
     font-family: $uniqueFont;
-    font-size: 38px;
+    font-size: 43px;
 }
 
 .underline-svg {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 40px;
-  width: 100%;
-  height: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    width: 100%;
+    height: 20px;
 }
 
 .underline-svg svg {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .underline-svg path {
- stroke: #2196f3;
-  stroke-width: 3;
-  fill: none;
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: drawLine 5s ease forwards;
-  animation-fill-mode: forwards; /* important to keep it visible */
+    stroke: #2196f3;
+    stroke-width: 3;
+    fill: none;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawLine 5s ease forwards;
+    animation-fill-mode: forwards;
+    /* important to keep it visible */
 }
 
 @keyframes drawLine {
-  to {
-    stroke-dashoffset: 0;
-  }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
+
 body {
     background: #000 !important;
 }
@@ -145,7 +150,7 @@ body {
 
 .bigT {
     background-attachment: fixed !important;
-    font-size: 35px;
+    font-size: 40px;
     margin-bottom: 0px;
     letter-spacing: -2px;
     font-weight: 700;
@@ -215,17 +220,19 @@ body {
             width: 700px;
             transform: translateX(-50%);
             border-radius: 100px;
-            padding: 15px 35px;
+            padding: 15px 25px 15px 20px;
             background-color: rgba(29, 29, 29, 0.900);
             box-shadow: $shadow;
             animation-name: headerAnime;
             animation-iteration-count: 1;
             animation-duration: 1s;
             animation-direction: alternate;
+
             @keyframes headerAnime {
                 0% {
                     transform: translate(-50%, 100px);
                 }
+
                 100% {
                     transform: translate(-50%, 0px);
                 }
@@ -241,42 +248,45 @@ body {
 
 
     // Banner SASS Start
-    .topBar{
+    .topBar {
         position: relative;
         height: 100vh;
         overflow: hidden;
-    
-        &::before{
+
+        &::before {
             background: url('../img/banner.jpg');
             position: absolute;
-            background-attachment: fixed!important;
+            background-attachment: fixed !important;
             background-repeat: no-repeat;
             background-size: cover;
-            content:'';
-            top:0;
+            content: '';
+            top: 0;
             left: 0;
             right: 0;
-            bottom:0;
+            bottom: 0;
             width: 100%;
             height: 100%;
             transition: 0.2s all linear;
         }
-            &.active{
-        &::before{
-            transform: scale(1.2);
+
+        &.active {
+            &::before {
+                transform: scale(1.2);
+            }
         }
     }
-    }
+
     .banner_section {
         width: 100%;
         height: 100vh;
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
-            display: flex;
+        transform: translate(-50%, -50%);
+        display: flex;
         justify-content: center;
         align-items: center;
+
         .bigB {
             p {
                 line-height: 100px;
@@ -476,7 +486,8 @@ body {
                         color: $white;
                         font-weight: 700;
                     }
-                    .subText{
+
+                    .subText {
                         font-size: 13.7px;
                     }
                 }
@@ -532,9 +543,17 @@ body {
 
     // FAQ SASS Start
     .faq_list {
+        .border_line {
+            border: 1px solid $border1;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
         .accordion {
             .accordion-item {
-                border: 1px solid $border1;
+                // border: 1px solid $border1;
+                box-shadow: $shadow;
+                border-radius: 20px;
 
                 .accordion-header {
                     button {
@@ -574,7 +593,7 @@ body {
     // Contact Us SASS Start
     .contact_us {
         .subHead {
-            margin: unset !important;
+            // margin: unset !important;
         }
 
         .right_sight {
@@ -590,6 +609,7 @@ body {
 
     // Footer SASS Start
     .footer {
+        position: relative;
         padding: 100px 0px 50px 0px;
         border-radius: 100px 100px 0px 0px;
         background: rgb(21, 21, 21);
@@ -688,6 +708,50 @@ body {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1300px!important;
+        max-width: 1300px !important;
     }
 }
+
+// Drag Images SASS Start
+.drag_img {
+    position: absolute;
+    top:140px;
+    right:180px;
+    z-index: 100;
+    width:150px;
+    transition: transform 0.3s ease;
+    cursor: grab;
+    &.one{
+        animation-name: chilling;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+
+    }
+    &.twp{
+        top:unset;
+        bottom: 0;
+        width: 250px;
+        right: 0;
+    }
+    &.three{
+        top:-130px;
+        right: 0;
+       width: 150px;
+    }
+}
+@keyframes chilling {
+    to{
+        transform: translateY(20px);
+    }
+    from{
+        transform: translateY(0px);
+    }
+}
+
+/* Override to show native mouse cursor */
+html, body, .__react-animated-cursor {
+  cursor: auto !important;
+}
+// Drag Images SASS End

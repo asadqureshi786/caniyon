@@ -38,7 +38,7 @@ export default function Header() {
                                 <a href="" className="menu_item">About</a>
                             </li>
                             <li>
-                                <a href="" className="menu_item">Servie</a>
+                                <a href="" className="menu_item">Service</a>
                             </li>
                             <li>
                                 <a href="" className="menu_item">Work</a>
