@@ -68,6 +68,12 @@ export default function Offers() {
                             </Col>
                         ))
                     }
+                    
+                    <div className="text-center mt-4">
+                           <p className="text white subText mb-0 pb-0 ">From start to finish, our work process is as simple as they come. But the journey is always magic!</p>
+                           <p className="text white subText  ">From start to finish, our work process is as simple as they come.</p>
+                           <a href="#contact" className='btn btn-primary' >Connect</a>
+                    </div>
 
                 </Row>
             </div>

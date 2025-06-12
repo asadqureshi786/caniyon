@@ -784,9 +784,15 @@ body {
 // }
 // Drag Images SASS End
 
-
+.mobile_toggle{
+    display: none;
+}
 // Mobile Responsive SASS Start
 @media only screen and (max-width: 768px) {
+    .protfolio_card {
+ 
+    margin-bottom: 10px;
+}
    .header{
     .logo{
         img{
@@ -795,6 +801,7 @@ body {
     }
     .mobile_toggle{
         color:$white;
+        display: block;
         svg{
             width: 30px;
             height: 30px;
@@ -873,12 +880,12 @@ body {
    }
    .package  {
     .row{
-        gap:15px!important;
+        gap:20px!important;
     }
    }
    .all_teams{
     .row{
-        gap:15px!important;
+        gap:20px!important;
     }
    
     .box{
@@ -894,7 +901,7 @@ body {
    }
    .protfolio_card {
     & > .row{
-        padding: 18px!important;
+        padding: 20px!important;
     }
     .content {
         margin-bottom: 20px;
@@ -905,8 +912,12 @@ body {
             }
             .primaryCol{
                 font-size: 13.5px;
+        margin-bottom: 5px;
             }
         }
+        .btn{
+                margin-bottom: 20px!important;
+            }
     }
    }
    .stay_process{
@@ -967,7 +978,7 @@ body {
     }
      .features_card{
         & > .row{
-            gap:15px!important;
+            gap:20px!important;
         }
     }
     .services_div{
@@ -990,6 +1001,18 @@ body {
                 width: 60px !important;
         top: 185px;
 
+    }
+    .container{
+        padding: 0px 20px!important;
+    }
+    .main_home_page .service_list ul li{
+        margin-bottom: 20px;
+    }
+    .protfolio_gap{
+            display: flex
+;
+    flex-direction: column;
+    gap: 20px;
     }
 }
 // Mobile Responsive SASS End

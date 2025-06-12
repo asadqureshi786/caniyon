@@ -37,7 +37,7 @@ export default function Banner() {
                                 <p className="main_txt white bigT">for Your <span className="primaryCol unique"><span className="underline-svg"></span>Business!</span></p>
                             </div>
                             <p className="desc subText mt-3" >Top-tier design solutions for tech firms and emerging businesses. Ditch the typical aesthetic methods and<br></br> embrace efficiency and originality. Coming soon.</p>
-                            <Button className='mt-2' >Connet</Button>
+                            <a href="#contact" className='btn btn-primary mt-2' >Connet</a>
                         </Col>
                     </Row>
                 </Container>

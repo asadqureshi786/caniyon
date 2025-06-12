@@ -57,7 +57,7 @@ export default function Services() {
     return (
         <>
          <Row className='pb-1 mt-3 pt-5 mb-4 ' >
-            <Col md={6} className='sticky_section'  >
+            <Col md={6} className='sticky_section'>
                    <div className="services_div sticky_section" style={{top:'20px'}} >
                 <div className="text-start sticky_section ">
                     <div className="subHead">

@@ -43,7 +43,8 @@ export default function Portfolio() {
                     </p>
                 </div>
             </div>
-            {
+            <div className="protfolio_gap">
+                  {
                 portfolio.map((item) => (
                     <div className="protfolio_card sticky_section">
                         <Row className='align-items-center p-5' >
@@ -67,6 +68,7 @@ export default function Portfolio() {
                     </div>
                 ))
             }
+            </div>
         </>
     )
 }
