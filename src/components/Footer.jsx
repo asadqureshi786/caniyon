@@ -16,14 +16,12 @@ export default function Footer() {
                         <div className="r_side">
                             <img src={Logo} alt="" />
                             <div className="menu">
-                                <a href="#" className='link' >About-us</a>
-                                <a href="#" className='link' >pricing</a>
-                                <a href="#" className='link' >Included</a>
-                                <a href="#" className='link' >Team</a>
-                                <a href="#" className='link' >Services</a>
-                                <a href="#" className='link' >Portfolio</a>
-                                <a href="#" className='link' >Faq-s</a>
-                                <a href="#" className='link' >The Processs</a>
+                                <a href="#aboutUs" className='link' >About-us</a>
+                                <a href="#services" className='link' >pricing</a>
+                                <a href="#team" className='link' >Team</a>
+                                <a href="#services" className='link' >Services</a>
+                                <a href="#protfolio" className='link' >Portfolio</a>
+                                <a href="#faq" className='link' >Faq-s</a>
                             </div>
                         </div>
                         <div className="l_side">

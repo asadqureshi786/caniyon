@@ -215,7 +215,7 @@ body {
         &.active {
             position: fixed;
             z-index: 99;
-            bottom: 15px;
+            bottom: 20px;
             left: 50%;
             width: 700px;
             transform: translateX(-50%);
@@ -787,8 +787,14 @@ body {
 .mobile_toggle{
     display: none;
 }
+.sm_logo{
+    display: none;
+}
 // Mobile Responsive SASS Start
 @media only screen and (max-width: 768px) {
+    .main_home_page .all_teams .box img{
+        filter:unset;
+    }
     .protfolio_card {
  
     margin-bottom: 10px;
@@ -833,8 +839,16 @@ body {
     }     
     }
     &.active{
-        bottom:0px!important;
-        .logo,.mobile_toggle{
+        bottom:20px!important;
+        width: 90%!important;
+        .sm_logo{
+            display: block;
+            width: 30px!important;
+        }
+        .lg_logo{
+            display: none!important;
+        }
+        .mobile_toggle{
             display: none!important;
         }
         .menu{

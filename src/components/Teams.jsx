@@ -29,7 +29,7 @@ export default function Teams() {
     ]
     return (
         <>
-            <div className="offers maxWith  pb-1 mt-5 pt-5">
+            <div className="offers maxWith  pb-1 mt-5 pt-5" id="team" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >The Team</span>

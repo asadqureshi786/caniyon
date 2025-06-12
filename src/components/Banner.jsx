@@ -16,10 +16,8 @@ export default function Banner() {
         const handleAnime = ()=>{
             if(scrollY > 10){
                 setAnime(true)
-                console.log("yes")
             }else{
                 setAnime(false)
-                console.log("Not")
             }
         }
         window.addEventListener("scroll", handleAnime);

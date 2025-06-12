@@ -45,6 +45,11 @@ export default function Contact() {
                                         <textarea rows={6} className='form-control' ></textarea>
                                     </div>
                                 </Col>
+                                <Col md={12}>
+                                    <div class="d-flex justify-content-end mt-2">
+                                        <button className='btn btn-primary' >Submit</button>
+                                    </div>
+                                </Col>
                             </Row>
                         </form>
                     </div>

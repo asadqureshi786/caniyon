@@ -30,7 +30,7 @@ export default function Portfolio() {
     ]
     return (
         <>
-            <div className="portfolio maxWith  pb-1 mt-5 pt-5 mb-4" idgg="protfolio" >
+            <div className="portfolio maxWith  pb-1 mt-5 pt-5 mb-4" id="protfolio" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Portfolio</span>
