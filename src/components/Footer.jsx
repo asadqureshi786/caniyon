@@ -44,7 +44,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="second text-center pt-5 mt-5">
-                        <p className="lightCol f14">© 2024 Copyright  <span className="ps-1 primaryCol">LoremIpsum</span></p>
+                        <p className="lightCol f14">© 2024 Copyright  <span className="ps-1 primaryCol">CANIYON</span></p>
                     </div>
                 </Container>
                           

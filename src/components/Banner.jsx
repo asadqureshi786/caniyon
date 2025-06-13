@@ -25,6 +25,7 @@ export default function Banner() {
     return (
         <>
          <div className={`topBar  ${anime ? 'active' : ''}`}>
+            <div className="banner_img"></div>
              <Header />
             <div className={ ` banner_section text-center `}  >
                 <Container >

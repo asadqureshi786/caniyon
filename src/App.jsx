@@ -55,13 +55,13 @@ function App() {
           <div className="upper_layer">
             <Container>
               <AboutUs />
-              <Offers />
               <Featues/>
-              <Teams/>
-              <Services/>
               <Portfolio/>
+              <Services/>
+              <Offers />
+              <Teams/>
               <div className="onTop">
-                <Contact className="onTop" />
+              <Contact className="onTop" />
               <Faq className="onTop" />
               <Process className="onTop" />
               </div>

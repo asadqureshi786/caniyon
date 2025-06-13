@@ -29,7 +29,7 @@ export default function Offers() {
     ]
     return (
         <>
-            <div className="offers maxWith pb-1 pt-2" id="services" >
+            <div className="offers maxWith mt-5 pt-5 pb-1 pt-2" id="services" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Services Pricing</span>

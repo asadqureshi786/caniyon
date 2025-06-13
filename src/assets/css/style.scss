@@ -82,16 +82,16 @@ body {
     border: 1px solid #0D0D0D;
     position: relative;
 
-    &::before {
-        position: absolute;
-        content: '';
-        top: -2.1px;
-        left: -2.1px;
-        right: -2.1px;
-        bottom: -2.1px;
-        border: 5px solid #0D0D0D;
-        transition: 0.2s all linear;
-    }
+        // &::before {
+        //     position: absolute;
+        //     content: '';
+        //     top: -2.1px;
+        //     left: -2.1px;
+        //     right: -2.1px;
+        //     bottom: -2.1px;
+        //     border: 5px solid #0D0D0D;
+        //     transition: 0.2s all linear;
+        // }
 
 
 }
@@ -107,11 +107,11 @@ body {
         background: rgb(21, 21, 21);
         border: none;
         box-shadow: $shadow;
-        color: $white;
+        color: $lightCol;
         font-size: 13px;
-
+        
         &:focus {
-            color: $white;
+            color: $lightCol;
             background: rgb(21, 21, 21);
             ;
             box-shadow: $shadow;
@@ -253,9 +253,9 @@ body {
         height: 100vh;
         overflow: hidden;
 
-        &::before {
+        .banner_img {
             background: url('../img/banner.jpg');
-            position: absolute;
+            position: fixed;
             background-attachment: fixed !important;
             background-repeat: no-repeat;
             background-size: cover;
@@ -270,7 +270,8 @@ body {
         }
 
         &.active {
-            &::before {
+            // &::before {
+            .banner_img {
                 transform: scale(1.2);
             }
         }
@@ -559,7 +560,7 @@ body {
 
                 .accordion-header {
                     button {
-                        background: #000;
+                background-color: rgb(21, 21, 21);
                         border: none;
                         box-shadow: $shadow;
                         color: $white;
@@ -743,7 +744,7 @@ body {
         top: unset;
         bottom: 0;
         width: 250px;
-        left: 0;
+        left: 29px;
           animation-name: scaling;
         animation-duration: 2s;
         animation-iteration-count: infinite;
