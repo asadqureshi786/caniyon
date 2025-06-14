@@ -6,7 +6,7 @@ import { Card, Button, Row, Col } from 'react-bootstrap'
 export default function Featues() {
     return (
         <>
-            <div className="featues maxWith pb-1 mt-0 pt-2">
+            <div className="featues maxWith pb-1 mt-0 pt-2" data-aos="fade-up" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Included Features</span>
@@ -18,7 +18,7 @@ export default function Featues() {
                     </p>
                 </div>
             </div>
-            <div className="features_card mt-5">
+            <div className="features_card mt-5" data-aos="fade-up" >
                 <Row>
                     <Col md={4}>
                         <div className="item">

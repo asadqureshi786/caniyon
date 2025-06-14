@@ -57,7 +57,7 @@ export default function Services() {
     return (
         <>
          <Row className='pb-1 mt-3 pt-5 mb-4 ' >
-            <Col md={6} className='sticky_section'>
+            <Col md={6} className='sticky_section' data-aos="fade-right" >
                    <div className="services_div sticky_section" style={{top:'20px'}} >
                 <div className="text-start sticky_section ">
                     <div className="subHead">
@@ -71,7 +71,7 @@ export default function Services() {
             </div>
             </Col>
             <Col md={6}>
-                <div className="service_list">
+                <div className="service_list" data-aos="fade-up" >
                     <ul>
                         {
                             sItem.map((item)=>(

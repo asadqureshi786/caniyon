@@ -30,7 +30,7 @@ export default function Portfolio() {
     ]
     return (
         <>
-            <div className="portfolio maxWith  pb-1 mt-5 pt-5 mb-4" id="protfolio" >
+            <div className="portfolio maxWith  pb-1 mt-5 pt-5 mb-4" id="protfolio" data-aos="fade-up" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Portfolio</span>
@@ -46,7 +46,7 @@ export default function Portfolio() {
             <div className="protfolio_gap">
                   {
                 portfolio.map((item) => (
-                    <div className="protfolio_card sticky_section">
+                    <div className="protfolio_card sticky_section" data-aos="fade-up" >
                         <Row className='align-items-center p-5' >
                             <Col md={6}>
                                 <div className="content sticky_section">
@@ -56,7 +56,11 @@ export default function Portfolio() {
                                         <p className='subText'>Our Services:</p>
                                         <p className='primaryCol'>{item.service}</p>
                                     </div>
-                                    <button className='btn btn-primary bigB' >Check it out!</button>
+                                    <button className='btn btn-primary bigB' >
+                                        
+                                             <span class="top">Check it out!</span>
+                                <span class="bottom">Check it out!</span>
+                                        </button>
                                 </div>
                             </Col>
                             <Col md={6}>

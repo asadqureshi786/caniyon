@@ -8,7 +8,7 @@ export default function Process() {
     return (
         <>
             <div className="position-relative">
-                   <div className="process maxWith  pb-1 mt-5 pt-5 mb-4">
+                   <div className="process maxWith  pb-1 mt-5 pt-5 mb-4" data-aos="fade-up" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >The Process</span>
@@ -19,7 +19,7 @@ export default function Process() {
                     </p>
                 </div>
             </div>
-            <div className="stay_process mt-4">
+            <div className="stay_process mt-4" data-aos="fade-up" >
                 <div className="box">
                     <Row>
                         <Col md={6}>

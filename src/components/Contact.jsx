@@ -9,7 +9,7 @@ export default function Contact() {
         <>
             <Row className='pb-1 mt-5 pt-5 mb-4 justify-content-center' id="contact" >
                 <Col md={6}>
-                    <div className="contact_us">
+                    <div className="contact_us" data-aos="fade-up" >
                         <div className="text-center">
                             <div className="subHead">
                                 <PiWarningCircleLight /><span className='text' >Find Us</span>
@@ -18,7 +18,7 @@ export default function Contact() {
                             <p className="text white subText">Contact us for more information or assistance.</p>
                         </div>
                     </div>
-                       <div class="form_list">
+                       <div class="form_list" data-aos="fade-up" >
                         <form>
                             <Row>
                                 <Col md={12}>
@@ -47,7 +47,10 @@ export default function Contact() {
                                 </Col>
                                 <Col md={12}>
                                     <div class="d-flex justify-content-center mt-2">
-                                        <button className='btn btn-primary' >Submit</button>
+                                        <button className='btn btn-primary' >
+                                             <span class="top">Submit</span>
+                                        <span class="bottom">Submit</span>
+                                            </button>
                                     </div>
                                 </Col>
                             </Row>

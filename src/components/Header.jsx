@@ -14,6 +14,7 @@ import React, { useEffect, useState } from 'react';
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
+    const [slideMenu,setSlideMenu] = useState(false)
 useEffect(() => {
   const handleScroll = () => {
     if (window.scrollY > 200) {
@@ -25,13 +26,19 @@ useEffect(() => {
     const scrolledToBottom =
       window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
 
+    
+
     if (scrolledToBottom) {
-      setScrolled(false);
+      setSlideMenu(true);
       console.log('agaya');  // ✅ Will fire on bottom scroll
+    }
+    else{
+      setSlideMenu(false);
     }
   };
 
   window.addEventListener("scroll", handleScroll);
+  // window.addEventListener("scroll", scrolledToBottom);
 
   return () => {
     window.removeEventListener("scroll", handleScroll);
@@ -43,7 +50,7 @@ useEffect(() => {
     return (
         <>
             <Container>
-                <div className={`header ${scrolled ? 'active' : ''}`}>
+                <div className={`header ${scrolled ? 'active' : ''} ${slideMenu ? 'hideActive' : ''} `}>
                     <a href="#" className='logo' >
                         <img src={Logo} className='lg_logo' alt="Logo" />
                         <img src={sm_Logo} className='sm_logo' alt="" />

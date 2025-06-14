@@ -29,7 +29,7 @@ export default function Teams() {
     ]
     return (
         <>
-            <div className="offers maxWith  pb-1 mt-5 pt-5" id="team" >
+            <div className="offers maxWith  pb-1 mt-5 pt-5" id="team" data-aos="fade-up" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >The Team</span>
@@ -41,7 +41,7 @@ export default function Teams() {
                 </div>
             </div>
 
-            <div className="all_teams mt-4 pt-2">
+            <div className="all_teams mt-4 pt-2" data-aos="fade-up" >
                 <Row>
                     {
                         teams.map((item) => (

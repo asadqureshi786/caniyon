@@ -11,7 +11,7 @@ export default function Footer() {
     return (
         <>
             <div class="footer">
-                <Container>
+                <Container data-aos="fade-up" >
                     <div className="first">
                         <div className="r_side">
                             <img src={Logo} alt="" />

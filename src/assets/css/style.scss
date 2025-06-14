@@ -18,6 +18,67 @@ body {
     font-weight: 600;
 }
 
+.btn {
+    transition: 0.2s all linear;
+    overflow: hidden;
+    position: relative;
+    min-width: 140px;
+    height: 45px;
+    
+    &>span {
+       position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease;
+      top:-1px;
+      left:0;
+    }
+
+    .bottom {
+        transform: translateY(100%);
+    }
+
+    &:hover{
+        .top{
+            transform: translateY(-100%);
+        }
+        .bottom{
+            transform: translateY(0);
+        }
+    }
+}
+
+.banner_section_style {
+    transition: 0.2s all linear;
+}
+
+.secction_blur {
+    filter: blur(1px);
+}
+
+.hideActive {
+    animation-name: hideBottomMenu !important;
+    transition: 0.2s all linear !important;
+    animation-iteration-count: 1 !important;
+    animation-direction: alternate !important;
+    animation-duration: 2s !important;
+}
+
+@keyframes hideBottomMenu {
+    0% {
+        transform: translate(-50%, 0px);
+        // top:0;
+    }
+
+    100% {
+        // top:500px;
+        transform: translate(-50%, 1000px);
+    }
+}
+
 .sm_unique {
     color: $primaryCol !important;
     font-family: $uniqueFont;
@@ -82,16 +143,16 @@ body {
     border: 1px solid #0D0D0D;
     position: relative;
 
-        // &::before {
-        //     position: absolute;
-        //     content: '';
-        //     top: -2.1px;
-        //     left: -2.1px;
-        //     right: -2.1px;
-        //     bottom: -2.1px;
-        //     border: 5px solid #0D0D0D;
-        //     transition: 0.2s all linear;
-        // }
+    // &::before {
+    //     position: absolute;
+    //     content: '';
+    //     top: -2.1px;
+    //     left: -2.1px;
+    //     right: -2.1px;
+    //     bottom: -2.1px;
+    //     border: 5px solid #0D0D0D;
+    //     transition: 0.2s all linear;
+    // }
 
 
 }
@@ -109,7 +170,7 @@ body {
         box-shadow: $shadow;
         color: $lightCol;
         font-size: 13px;
-        
+
         &:focus {
             color: $lightCol;
             background: rgb(21, 21, 21);
@@ -183,6 +244,8 @@ body {
         padding: 25px 0px;
         position: relative;
         z-index: 1;
+        transition: 0.2s all linear;
+
 
         .logo {
             img {
@@ -207,6 +270,10 @@ body {
                         font-size: 13px;
                         font-weight: 600;
                         text-transform: uppercase;
+                        transition: 0.2s all linear;
+                        &:hover{
+                            color:$primaryCol;
+                        }
                     }
                 }
             }
@@ -221,20 +288,25 @@ body {
             transform: translateX(-50%);
             border-radius: 100px;
             padding: 15px 25px 15px 20px;
+            transition: 0.2s all linear;
             background-color: rgba(29, 29, 29, 0.900);
             box-shadow: $shadow;
             animation-name: headerAnime;
             animation-iteration-count: 1;
             animation-duration: 1s;
             animation-direction: alternate;
+            animation-fill-mode: backwards;
 
             @keyframes headerAnime {
                 0% {
                     transform: translate(-50%, 100px);
+                    opacity: 0;
+
                 }
 
                 100% {
                     transform: translate(-50%, 0px);
+                    opacity: 1;
                 }
 
             }
@@ -252,6 +324,7 @@ body {
         position: relative;
         height: 100vh;
         overflow: hidden;
+        transition: 0.2s all linear;
 
         .banner_img {
             background: url('../img/banner.jpg');
@@ -270,6 +343,7 @@ body {
         }
 
         &.active {
+
             // &::before {
             .banner_img {
                 transform: scale(1.2);
@@ -544,12 +618,13 @@ body {
 
     // FAQ SASS Start
     .faq_list {
-        
+
         .border_line {
             border: 1px solid $border1;
             padding: 20px;
             border-radius: 20px;
         }
+
         .accordion {
             .accordion-item {
                 background-color: rgb(21, 21, 21);
@@ -560,7 +635,7 @@ body {
 
                 .accordion-header {
                     button {
-                background-color: rgb(21, 21, 21);
+                        background-color: rgb(21, 21, 21);
                         border: none;
                         box-shadow: $shadow;
                         color: $white;
@@ -655,7 +730,7 @@ body {
 
                     &:hover {
                         color: $primaryCol;
-                        text-decoration: underline;
+                        text-decoration: none;
                     }
                 }
             }
@@ -745,7 +820,7 @@ body {
         bottom: 0;
         width: 250px;
         left: 29px;
-          animation-name: scaling;
+        animation-name: scaling;
         animation-duration: 2s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -773,7 +848,7 @@ body {
     to {
         transform: scale(0.8);
     }
-    
+
     from {
         transform: scale(1);
     }
@@ -785,276 +860,332 @@ body {
 // }
 // Drag Images SASS End
 
-.mobile_toggle{
+.mobile_toggle {
     display: none;
 }
-.sm_logo{
+
+.sm_logo {
     display: none;
 }
+
 // Mobile Responsive SASS Start
 @media only screen and (max-width: 768px) {
-    .main_home_page .all_teams .box img{
-        filter:unset;
+    .main_home_page .all_teams .box img {
+        filter: unset;
     }
+
     .protfolio_card {
- 
-    margin-bottom: 10px;
-}
-   .header{
-    .logo{
-        img{
-            width: 150px!important;
-        }
+
+        margin-bottom: 10px;
     }
-    .mobile_toggle{
-        color:$white;
-        display: block;
-        svg{
-            width: 30px;
-            height: 30px;
+
+    .header {
+        .logo {
+            img {
+                width: 150px !important;
+            }
         }
-    }
-    .menu{
-        position: absolute;
-        top:100px;
-        width: 100%;
-        left: 0;
-        height: 0px;
-        transition: 0.2s all linear!important;
-        overflow: hidden;
-        z-index: 99999;
-        ul{
-            border-radius: 24px;
-            transition: 0.2s all linear!important;
-            padding: 35px 0px!important;
-            background:rgb(33 33 33 / 97%);
-            // rgb(33 33 33 / 89%)
-            border:1px solid $border1;
-            box-shadow: $shadow;
-            flex-direction: column;
-        }
-        &.showMenu{
-        transition: 0.2s all linear!important;
-        height: fit-content;
-        overflow: auto;
-    }     
-    }
-    &.active{
-        bottom:20px!important;
-        width: 90%!important;
-        .sm_logo{
+
+        .mobile_toggle {
+            color: $white;
             display: block;
-            width: 30px!important;
-        }
-        .lg_logo{
-            display: none!important;
-        }
-        .mobile_toggle{
-            display: none!important;
-        }
-        .menu{
-            position: static;
-            height:fit-content;
-            ul{
-                flex-direction: row!important;
-                gap:10px!important;
-                padding: 2px 0px!important;
-                background: none!important;
-                box-shadow: none!important;
-                border: none!important;
-                justify-content: center;
-                .menu_item{
-                    font-size:12px!important;
-                }
+
+            svg {
+                width: 30px;
+                height: 30px;
             }
         }
-    }
-   }
-   .unique{
-    font-size: 33px;
-   }
-   .subText{
-    font-size: 13.5px!important;
-   }
-   .bigT{
-    font-size: 30px;
-   }
-   .sm_unique{
-    font-size: 33px;
-   }
-   .banner_section{
-    .bigB{
-        p{
-            font-size: 30px!important;
-            line-height: 40px!important;
-        }
-    }
-   }
-   .btn{
-    padding: 10px 40px!important;
-   }
-   .package  {
-    .row{
-        gap:20px!important;
-    }
-   }
-   .all_teams{
-    .row{
-        gap:20px!important;
-    }
-   
-    .box{
-        .info{
-            .name{
-                font-size: 18px!important;
-            }
-        }
-        img{
-            height: 200px!important;
-        }
-    }
-   }
-   .protfolio_card {
-    & > .row{
-        padding: 20px!important;
-    }
-    .content {
-        margin-bottom: 20px;
-        & > .d-flex{
-            flex-direction: column;
-            .subText{
-                margin-bottom: 1px;
-            }
-            .primaryCol{
-                font-size: 13.5px;
-        margin-bottom: 5px;
-            }
-        }
-        .btn{
-                margin-bottom: 20px!important;
-            }
-    }
-   }
-   .stay_process{
-    .box{
-        padding: 18px!important;
-        .sideList{
-            margin-top: 20px!important;
-            padding-left: 0px!important;
-            li{
-                .heading{
-                    font-size: 18px!important;
-                }
-            }
-        }
-    }
-   }
-   .footer{
-    border-radius: 50px 50px 0px 0px!important;
-    padding:80px 0px 53px 0px!important;
-    .first{
-        flex-direction: column;
-        .r_side{
-            img{
-                width: 200px!important;
-            }
-            .menu{
+
+        .menu {
+            position: absolute;
+            top: 100px;
+            width: 100%;
+            left: 0;
+            height: 0px;
+            transition: 0.2s all linear !important;
+            overflow: hidden;
+            z-index: 99999;
+
+            ul {
+                border-radius: 24px;
+                transition: 0.2s all linear !important;
+                padding: 35px 0px !important;
+                background: rgb(33 33 33 / 97%);
+                // rgb(33 33 33 / 89%)
+                border: 1px solid $border1;
+                box-shadow: $shadow;
                 flex-direction: column;
-                gap:0px;
-                margin-bottom: 40px;
+            }
+
+            &.showMenu {
+                transition: 0.2s all linear !important;
+                height: fit-content;
+                overflow: auto;
             }
         }
-        .l_side{
-            .box{
-                & > div{
-                   .title{
-                     text-align: center;
-                   }
-                   .d-flex{
-                    justify-content: center!important;
-                }
+
+        &.active {
+            bottom: 20px !important;
+            width: 90% !important;
+
+            .sm_logo {
+                display: block;
+                width: 30px !important;
             }
-            .social{
-                    justify-content: center!important;
+
+            .lg_logo {
+                display: none !important;
+            }
+
+            .mobile_toggle {
+                display: none !important;
+            }
+
+            .menu {
+                position: static;
+                height: fit-content;
+
+                ul {
+                    flex-direction: row !important;
+                    gap: 10px !important;
+                    padding: 2px 0px !important;
+                    background: none !important;
+                    box-shadow: none !important;
+                    border: none !important;
+                    justify-content: center;
+
+                    .menu_item {
+                        font-size: 12px !important;
+                    }
                 }
             }
         }
     }
-    .second{
-        margin-top: 0px!important;
+
+    .unique {
+        font-size: 33px;
     }
-   }
-      .drag_img.twp{
-        width: 100px!important;
+
+    .subText {
+        font-size: 13.5px !important;
     }
-      .drag_img.one{
+
+    .bigT {
+        font-size: 30px;
+    }
+
+    .sm_unique {
+        font-size: 33px;
+    }
+
+    .banner_section {
+        .bigB {
+            p {
+                font-size: 30px !important;
+                line-height: 40px !important;
+            }
+        }
+    }
+
+    .btn {
+        padding: 10px 40px !important;
+    }
+
+    .package {
+        .row {
+            gap: 20px !important;
+        }
+    }
+
+    .all_teams {
+        .row {
+            gap: 20px !important;
+        }
+
+        .box {
+            .info {
+                .name {
+                    font-size: 18px !important;
+                }
+            }
+
+            img {
+                height: 200px !important;
+            }
+        }
+    }
+
+    .protfolio_card {
+        &>.row {
+            padding: 20px !important;
+        }
+
+        .content {
+            margin-bottom: 20px;
+
+            &>.d-flex {
+                flex-direction: column;
+
+                .subText {
+                    margin-bottom: 1px;
+                }
+
+                .primaryCol {
+                    font-size: 13.5px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .btn {
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+
+    .stay_process {
+        .box {
+            padding: 18px !important;
+
+            .sideList {
+                margin-top: 20px !important;
+                padding-left: 0px !important;
+
+                li {
+                    .heading {
+                        font-size: 18px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        border-radius: 50px 50px 0px 0px !important;
+        padding: 80px 0px 53px 0px !important;
+
+        .first {
+            flex-direction: column;
+
+            .r_side {
+                img {
+                    width: 200px !important;
+                }
+
+                .menu {
+                    flex-direction: column;
+                    gap: 0px;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .l_side {
+                .box {
+                    &>div {
+                        .title {
+                            text-align: center;
+                        }
+
+                        .d-flex {
+                            justify-content: center !important;
+                        }
+                    }
+
+                    .social {
+                        justify-content: center !important;
+                    }
+                }
+            }
+        }
+
+        .second {
+            margin-top: 0px !important;
+        }
+    }
+
+    .drag_img.twp {
+        width: 100px !important;
+    }
+
+    .drag_img.one {
         right: 10px;
         width: 75px !important;
     }
-     .features_card{
-        & > .row{
-            gap:20px!important;
+
+    .features_card {
+        &>.row {
+            gap: 20px !important;
         }
     }
-    .services_div{
-        .subHead{
-            margin:0 auto!important;
+
+    .services_div {
+        .subHead {
+            margin: 0 auto !important;
         }
+
         .sticky_section {
-            text-align: center!important;
+            text-align: center !important;
+
             .subText {
-                padding:0px!important;;
-                margin:0px!important;
-                margin-bottom: 30px!important;
+                padding: 0px !important;
+                ;
+                margin: 0px !important;
+                margin-bottom: 30px !important;
             }
         }
     }
+
     .sticky_section {
         position: static;
     }
-    .drag_img.three{
-                width: 60px !important;
+
+    .drag_img.three {
+        width: 60px !important;
         top: 185px;
 
     }
-    .container{
-        padding: 0px 20px!important;
+
+    .container {
+        padding: 0px 20px !important;
     }
-    .main_home_page .service_list ul li{
+
+    .main_home_page .service_list ul li {
         margin-bottom: 20px;
     }
-    .protfolio_gap{
-            display: flex
-;
-    flex-direction: column;
-    gap: 20px;
+
+    .protfolio_gap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }
+
 // Mobile Responsive SASS End
 
 
-.scrollUp{
+.scrollUp {
     position: fixed;
     bottom: 12px;
     right: 15px;
     // background: $primaryCol;
-    border:1px solid $border1;
+    border: 1px solid $border1;
     box-shadow: $shadow;
     width: 35px;
     height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:$white;
+    color: $white;
     z-index: 100;
     border-radius: 100px;
     transition: 0.2s all linear;
-    svg{
+
+    svg {
         width: 20px;
         height: 20px;
     }
 }
-.hideScroll{
+
+.hideScroll {
     opacity: 0;
     visibility: hidden;
 }

@@ -7,7 +7,7 @@ import { BsQuestionCircle } from "react-icons/bs";
 export default function Faq() {
     return (
         <>
-            <div className="faq maxWith  pb-1 mt-5 pt-5 mb-4" id="faq" >
+            <div className="faq maxWith  pb-1 mt-5 pt-5 mb-4" id="faq" data-aos="fade-up" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >FAQs</span>
@@ -19,7 +19,7 @@ export default function Faq() {
                 </div>
             </div>
 
-            <div className="faq_list">
+            <div className="faq_list" data-aos="fade-up" >
                <Row className='justify-content-center' >
                 <Col md={7} >
                     <div className="border_line">

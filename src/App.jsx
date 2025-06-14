@@ -14,6 +14,7 @@ import { Container } from "react-bootstrap";
 import AnimatedCursor from "react-animated-cursor";
 import { GoArrowUp } from "react-icons/go";
 import { useEffect, useState } from "react";
+import AOS from 'aos';
 
 function App() {
   const [scroll, setScroll] = useState(false);
@@ -32,6 +33,17 @@ function App() {
       window.removeEventListener("scroll", scrollBar);
     };
   }, []); 
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,  
+    });
+       setTimeout(() => {
+      AOS.refresh();
+    }, 500);
+  }, []);
+
   return (
     <>
 
@@ -54,7 +66,7 @@ function App() {
           <Banner />
           <div className="upper_layer">
             <Container>
-              <AboutUs />
+              <AboutUs  />
               <Featues/>
               <Portfolio/>
               <Services/>

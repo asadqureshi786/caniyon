@@ -29,7 +29,7 @@ export default function Offers() {
     ]
     return (
         <>
-            <div className="offers maxWith mt-5 pt-5 pb-1 pt-2" id="services" >
+            <div className="offers maxWith mt-5 pt-5 pb-1 pt-2" id="services" data-aos="fade-up" >
                 <div className="text-center ">
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Services Pricing</span>
@@ -41,7 +41,7 @@ export default function Offers() {
                     </p>
                 </div>
             </div>
-            <div className="package mt-5">
+            <div className="package mt-5" data-aos="fade-up" >
                  <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Most Wanted</span>
                     </div>
@@ -63,7 +63,10 @@ export default function Offers() {
                                             ))
                                         }
                                     </ul>
-                                    <Button className='btn_white'>Let's get started!</Button>
+                                    <Button className='btn_white'>
+                                         <span class="top">Let's get started!</span>
+                                        <span class="bottom">Let's get started!</span>
+                                        </Button>
                                 </Card>
                             </Col>
                         ))
@@ -72,7 +75,10 @@ export default function Offers() {
                     <div className="text-center mt-4">
                            <p className="text white subText mb-0 pb-0 ">From start to finish, our work process is as simple as they come. But the journey is always magic!</p>
                            <p className="text white subText  ">From start to finish, our work process is as simple as they come.</p>
-                           <a href="#contact" className='btn btn-primary' >Connect</a>
+                           <a href="#contact" className='btn btn-primary' >
+                             <span class="top">Connect</span>
+                                        <span class="bottom">Connect</span>
+                            </a>
                     </div>
 
                 </Row>
