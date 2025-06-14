@@ -398,6 +398,7 @@ body {
             box-shadow: '';
             border-radius: 25px;
             padding: 30px;
+            height: 100%;
         }
 
         .subHead {
@@ -407,6 +408,14 @@ body {
         }
 
         .package_card {
+            position: relative;
+            .btn{
+                position: absolute;
+                left:50%;
+                transform: translateX(-50%);
+                bottom: 20px;
+                width: 85%;
+            }
             .price {
                 border-bottom: 1px solid $border1;
             }
@@ -415,6 +424,7 @@ body {
                 list-style: none;
                 padding: 0px;
                 margin: 10px 0px 30px 0px;
+                margin-bottom: 65px;
 
                 li {
                     display: flex;
