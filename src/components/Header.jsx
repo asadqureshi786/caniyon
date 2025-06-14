@@ -6,7 +6,7 @@ import { IoMenuOutline } from "react-icons/io5";
 
 // images
 import Logo from "../assets/img/logo.png"
-import sm_Logo from "../assets/img/sm_logo.jpg"
+import sm_Logo from "../assets/img/sm_logo.png"
 
 import React, { useEffect, useState } from 'react';
 
@@ -50,7 +50,7 @@ useEffect(() => {
     return (
         <>
             <Container>
-                <div className={`header ${scrolled ? 'active' : ''} ${slideMenu ? 'hideActive' : ''} `}>
+                <div className={`header ${scrolled ? 'active' : 'top_animation'} ${slideMenu ? 'hideActive' : ''} `}>
                     <a href="#" className='logo' >
                         <img src={Logo} className='lg_logo' alt="Logo" />
                         <img src={sm_Logo} className='sm_logo' alt="" />
