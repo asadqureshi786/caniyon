@@ -8,7 +8,7 @@ export default function Offers() {
         {
             id: 1,
             name: 'Basic Package',
-            subText: 'Logo design, branding basics & social media.',
+            subText: 'Logo design, branding basics & social media services.',
             price: '500',
             services: ['Logo design', 'Basic branding', 'Social media templates', 'Business card design', 'Letterhead design', 'Basic website setup (up to 5 pages)']
         },
