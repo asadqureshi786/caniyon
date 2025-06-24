@@ -29,7 +29,7 @@ export default function Banner() {
              <Header />
             <div className={ ` banner_section text-center `}  >
                 <Container >
-                    <Row className={`justify-content-center sticky_section banner_section_style ${anime ? ' secction_blur' : ''}`} >
+                    <Row className={`justify-content-center sticky_section banner_section_style`} >
                         <Col md={8}>
                             <div className="bigB" data-aos="zoom-in">
                                 <p className="main_txt bigT white"   ><span className="primaryCol">Innovative</span> Design</p>
