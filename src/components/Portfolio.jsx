@@ -35,7 +35,7 @@ export default function Portfolio() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Portfolio</span>
                     </div>
-                    <p className="bigT white my-2">BEHAVIOR SHOWS <span class="sm_unique" >WORTH</span> </p>
+                    <p className="bigT white my-2">BEHAVIOR SHOWS <span className="sm_unique" >WORTH</span> </p>
                     <p className="text white subText">
                         We specialize in transforming businesses into extraordinary brands.
                         We're passionate about continuing our mission. Explore our stellar
@@ -46,11 +46,11 @@ export default function Portfolio() {
             <div className="protfolio_gap">
                   {
                 portfolio.map((item) => (
-                    <div className="protfolio_card sticky_section" data-aos="fade-up" >
+                    <div key={item.heading} className="protfolio_card sticky_section" data-aos="fade-up" >
                         <Row className='align-items-center p-5' >
                             <Col md={6}>
                                 <div className="content sticky_section">
-                                    <h4 class="title white f30 fw7" >{item.heading}</h4>
+                                    <h4 className="title white f30 fw7" >{item.heading}</h4>
                                     <p className="subText mt-4">{item.text}</p>
                                     <div className="d-flex gap-1 pt-2 pb-2 align-align-items-center">
                                         <p className='subText'>Our Services:</p>
@@ -58,8 +58,8 @@ export default function Portfolio() {
                                     </div>
                                     <button className='btn btn-primary bigB' >
                                         
-                                             <span class="top">Check it out!</span>
-                                <span class="bottom">Check it out!</span>
+                                             <span className="top">Check it out!</span>
+                                <span className="bottom">Check it out!</span>
                                         </button>
                                 </div>
                             </Col>

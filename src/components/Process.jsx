@@ -13,7 +13,7 @@ export default function Process() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >The Process</span>
                     </div>
-                    <p className="bigT white my-2">STAY STREAMLINED,<span class="sm_unique" >YES?</span> </p>
+                    <p className="bigT white my-2">STAY STREAMLINED,<span className="sm_unique" >YES?</span> </p>
                     <p className="text white subText">
                        From start to finish, our work process is as simple as they come. But the journey is always magic!
                     </p>

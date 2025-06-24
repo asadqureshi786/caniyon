@@ -56,14 +56,14 @@ export default function Services() {
 
     return (
         <>
-         <Row className='pb-1 mt-3 pt-5 mb-4 ' >
+         <Row className='pb-1 mt-3 pt-5 mb-4 ' id="services" >
             <Col md={6} className='sticky_section' data-aos="fade-right" >
                    <div className="services_div sticky_section" style={{top:'20px'}} >
                 <div className="text-start sticky_section ">
                     <div className="subHead">
-                        <PiWarningCircleLight /><span className='text' >The Process</span>
+                        <PiWarningCircleLight /><span className='text' >The Services</span>
                     </div>
-                    <p className="bigT white my-2">STAY STREAMLINED, <span class="sm_unique" >YES?</span></p>
+                    <p className="bigT white my-2">STAY STREAMLINED, <span className="sm_unique" >YES?</span></p>
                     <p className="text white subText pe-5 me-4">
                         From start to finish, our work process is as simple as they come. But the journey is always magic!
                     </p>
@@ -75,8 +75,8 @@ export default function Services() {
                     <ul>
                         {
                             sItem.map((item)=>(
-                                <li>
-                                    <div class="items">
+                                <li key={item.title} >
+                                    <div className="items">
                                         <span className="count primaryCol f20">{item.count}</span>
                                         <h4 className='white fw7 f22 mt-2' >{item.title}</h4>
                                         <p className="lightCol mb-0 f13">{item.text}</p>

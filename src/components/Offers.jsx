@@ -20,7 +20,7 @@ export default function Offers() {
             services: ['Comprehensive branding', 'Website design', 'Marketing materials', 'SEO optimization', 'Email marketing setup', 'Social media management']
         },
         {
-            id: 2,
+            id: 3,
             name: 'Premium Package',
             subText: 'Advanced web dev, full branding & ongoing support.',
             price: '3000',
@@ -29,12 +29,12 @@ export default function Offers() {
     ]
     return (
         <>
-            <div className="offers maxWith mt-5 pt-5 pb-1 pt-2" id="services" data-aos="fade-up" >
+            <div className="offers maxWith mt-5 pt-5 pb-1 pt-2"  data-aos="fade-up" >
                 <div className="text-center ">
                     <div className="subHead">
-                        <PiWarningCircleLight /><span className='text' >Services Pricing</span>
+                        <PiWarningCircleLight /><span className='text' >Pricing</span>
                     </div>
-                    <p className="bigT white my-2">OUR <span class="sm_unique" >OFFERS</span> </p>
+                    <p className="bigT white my-2">OUR <span className="sm_unique" >OFFERS</span> </p>
                     <p className="text white subText">
                         We offer a range of inventive solutions tailored to your needs, promising exceptional caliber and value. Our pricing framework is designed to be transparent and affordable, presenting comprehensible packages for all budgets.
 
@@ -48,7 +48,7 @@ export default function Offers() {
                 <Row>
                     {
                         packageList.map((item) => (
-                            <Col md={4}>
+                            <Col key={item.id} md={4}>
                                 <Card className='package_card'>
                                     <h5 className='white f20 fw7 title text-uppercase' >{item.name}</h5>
                                     <p className="text lightCol f14 white">{item.subText}</p>
@@ -56,7 +56,7 @@ export default function Offers() {
                                     <ul className="list_item">
                                         {
                                             item.services.map((service)=>(
-                                                <li className="item">
+                                                <li key={service} className="item">
                                                     <span className="icon"><IoIosCheckmarkCircleOutline /></span>
                                                     <span className="text  white">{service}</span>
                                                 </li>
@@ -64,8 +64,8 @@ export default function Offers() {
                                         }
                                     </ul>
                                     <Button className='btn_white'>
-                                         <span class="top">Let's get started!</span>
-                                        <span class="bottom">Let's get started!</span>
+                                         <span className="top">Let's get started!</span>
+                                        <span className="bottom">Let's get started!</span>
                                         </Button>
                                 </Card>
                             </Col>
@@ -76,8 +76,8 @@ export default function Offers() {
                            <p className="text white subText mb-0 pb-0 ">From start to finish, our work process is as simple as they come. But the journey is always magic!</p>
                            <p className="text white subText  ">From start to finish, our work process is as simple as they come.</p>
                            <a href="#contact" className='btn btn-primary' >
-                             <span class="top">Connect</span>
-                                        <span class="bottom">Connect</span>
+                             <span className="top">Connect</span>
+                                        <span className="bottom">Connect</span>
                             </a>
                     </div>
 

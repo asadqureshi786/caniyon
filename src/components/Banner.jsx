@@ -37,8 +37,8 @@ export default function Banner() {
                             </div>
                             <p className="desc subText mt-3" >Top-tier design solutions for tech firms and emerging businesses. Ditch the typical aesthetic methods and<br></br> embrace efficiency and originality. Coming soon.</p>
                             <a href="#contact"  className='btn btn-primary mt-2' >
-                                <span class="top">Connect</span>
-                                <span class="bottom">Connect</span>
+                                <span className="top">Connect</span>
+                                <span className="bottom">Connect</span>
                             </a>
                         </Col>s
                     </Row>

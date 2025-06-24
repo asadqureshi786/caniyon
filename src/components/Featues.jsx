@@ -11,7 +11,7 @@ export default function Featues() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >Included Features</span>
                     </div>
-                    <p className="bigT white my-2">EACH STAGE IS <span class="sm_unique" >SEIZED</span>
+                    <p className="bigT white my-2">EACH STAGE IS <span className="sm_unique" >SEIZED</span>
                     </p>
                     <p className="text white subText">
                         Your revamped store will possess the many impressive attributes and powerful tools that turn spectators into buyers, maintaining an impeccable aesthetic and functionality.
@@ -25,9 +25,9 @@ export default function Featues() {
                             <span className="icon"><CiHeadphones /></span>
                             <h4 className="title">Custom Design</h4>
                             <p className="subText">Unique and tailored designs that reflect your brand’s personality and values.</p>
-                            <div className="last_icon">
+                            {/* <div className="last_icon">
                                 <PiWarningCircleLight />
-                            </div>
+                            </div> */}
                         </div>
                     </Col>
                     <Col md={4}>
@@ -35,9 +35,9 @@ export default function Featues() {
                             <span className="icon"><CiHeadphones /></span>
                             <h4 className="title">RESPONSIVE LAYOUT</h4>
                             <p className="subText">Ensuring your store looks stunning and functions perfectly on all devices.</p>
-                            <div className="last_icon">
+                            {/* <div className="last_icon">
                                 <PiWarningCircleLight />
-                            </div>
+                            </div> */}
                         </div>
                     </Col>
                     <Col md={4}>
@@ -45,9 +45,9 @@ export default function Featues() {
                             <span className="icon"><CiHeadphones /></span>
                             <h4 className="title">SOCIAL MEDIA</h4>
                             <p className="subText">Linking your shop to social media sites to boost your digital visibility.</p>
-                            <div className="last_icon">
+                            {/* <div className="last_icon">
                                 <PiWarningCircleLight />
-                            </div>
+                            </div> */}
                         </div>
                     </Col>
                 </Row>

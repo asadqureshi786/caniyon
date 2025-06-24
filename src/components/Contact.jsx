@@ -4,6 +4,8 @@ import { IoIosCall } from "react-icons/io";
 import { MdOutlineEmail } from "react-icons/md";
 import { Row, Col } from 'react-bootstrap';
 
+
+
 export default function Contact() {
     return (
         <>
@@ -14,29 +16,29 @@ export default function Contact() {
                             <div className="subHead">
                                 <PiWarningCircleLight /><span className='text' >Find Us</span>
                             </div>
-                            <p className="bigT white my-2">Let'Get In <span class="sm_unique" >Touch</span> </p>
+                            <p className="bigT white my-2">Let'Get In <span className="sm_unique" >Touch</span> </p>
                             <p className="text white subText">Contact us for more information or assistance.</p>
                         </div>
                     </div>
-                       <div class="form_list" data-aos="fade-up" >
+                       <div className="form_list" data-aos="fade-up" >
                         <form>
                             <Row>
                                 <Col md={12}>
                                     <div className="form-group">
                                         <label>Name</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="text" className="form-control" />
                                     </div>
                                 </Col>
                                 <Col md={12}>
                                     <div className="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" />
+                                        <input type="email" className="form-control" />
                                     </div>
                                 </Col>
                                 <Col md={12}>
                                     <div className="form-group">
                                         <label>Subject</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="text" className="form-control" />
                                     </div>
                                 </Col>
                                 <Col md={12}>
@@ -46,10 +48,10 @@ export default function Contact() {
                                     </div>
                                 </Col>
                                 <Col md={12}>
-                                    <div class="d-flex justify-content-center mt-2">
+                                    <div className="d-flex justify-content-center mt-2">
                                         <button className='btn btn-primary' >
-                                             <span class="top">Submit</span>
-                                        <span class="bottom">Submit</span>
+                                             <span className="top">Submit</span>
+                                        <span className="bottom">Submit</span>
                                             </button>
                                     </div>
                                 </Col>

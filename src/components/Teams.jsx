@@ -13,7 +13,7 @@ export default function Teams() {
         },
         {
             img: User2,
-            name: 'Liam Noah',
+            name: 'Jule Wakon',
             desig: 'Web Designer'
         },
         {
@@ -34,7 +34,7 @@ export default function Teams() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >The Team</span>
                     </div>
-                    <p className="bigT white my-2">SIGNIFICANT <span class="sm_unique" >ICONS</span></p>
+                    <p className="bigT white my-2">SIGNIFICANT <span className="sm_unique" >ICONS</span></p>
                     <p className="text white subText">
                         Like magnets, alike intellects mysteriously guide themselves towards one another. Our team, brimming with confidence and satisfaction, proudly presents itself as truly exceptional. Each team member boasts unique talents and skills, ensuring through mutual cooperation, we can guarantee unrivaled speed in delivering fast, superior services.
                     </p>
@@ -45,7 +45,7 @@ export default function Teams() {
                 <Row>
                     {
                         teams.map((item) => (
-                            <Col md={3}>
+                            <Col key={item.name} md={3}>
                                 <div className="box">
                                     <img src={item.img} className='img-fluid' ></img>
                                     <div className="info">

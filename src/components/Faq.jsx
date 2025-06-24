@@ -12,7 +12,7 @@ export default function Faq() {
                     <div className="subHead">
                         <PiWarningCircleLight /><span className='text' >FAQs</span>
                     </div>
-                    <p className="bigT white my-2">Baffled? We'll <span class="sm_unique" >assist!</span></p>
+                    <p className="bigT white my-2">Baffled? We'll <span className="sm_unique" >assist!</span></p>
                     <p className="text white subText">
                         This is a compilation of common inquiries about our offerings, crafted to aid you in your purchasing decisions.
                     </p>

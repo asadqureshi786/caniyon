@@ -10,7 +10,7 @@ import { Container } from 'react-bootstrap'
 export default function Footer() {
     return (
         <>
-            <div class="footer">
+            <div className="footer">
                 <Container data-aos="fade-up" >
                     <div className="first">
                         <div className="r_side">
