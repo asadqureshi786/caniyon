@@ -29,13 +29,13 @@ export default function Banner() {
              <Header />
             <div className={ ` banner_section text-center `}  >
                 <Container >
-                    <Row className={`justify-content-center sticky_section banner_section_style`} >
+                    <Row className={`justify-content-center sticky_section banner_section_style ${anime ? ' secction_blur' : ''}`} >
                         <Col md={8}>
-                            <div className="bigB" data-aos="zoom-in">
+                            <div className="bigB" data-aos="zoom-in"    data-aos-delay="300" data-aos-offset="0">
                                 <p className="main_txt bigT white"   ><span className="primaryCol">Innovative</span> Design</p>
                                 <p className="main_txt white bigT"   >for Your <span className="primaryCol unique"><span className="underline-svg"></span>Business!</span></p>
                             </div>
-                            <p className="desc subText mt-3" >Top-tier design solutions for tech firms and emerging businesses. Ditch the typical aesthetic methods and<br></br> embrace efficiency and originality. Coming soon.</p>
+                            <p className="desc subText mt-3"  >Top-tier design solutions for tech firms and emerging businesses. Ditch the typical aesthetic methods and<br></br> embrace efficiency and originality. Coming soon.</p>
                             <a href="#contact"  className='btn btn-primary mt-2' >
                                 <span className="top">Connect</span>
                                 <span className="bottom">Connect</span>
