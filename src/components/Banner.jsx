@@ -31,7 +31,7 @@ export default function Banner() {
                 <Container >
                     <Row className={`justify-content-center sticky_section banner_section_style ${anime ? ' secction_blur' : ''}`} >
                         <Col md={8}>
-                            <div className="bigB" data-aos="zoom-in" data-aos-delay="700" >
+                            <div className="bigB" data-aos="zoom-in">
                                 <p className="main_txt bigT white"   ><span className="primaryCol">Innovative</span> Design</p>
                                 <p className="main_txt white bigT"   >for Your <span className="primaryCol unique"><span className="underline-svg"></span>Business!</span></p>
                             </div>
