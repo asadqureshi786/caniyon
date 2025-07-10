@@ -56,11 +56,11 @@ export default function Portfolio() {
                                         <p className='subText'>Our Services:</p>
                                         <p className='primaryCol'>{item.service}</p>
                                     </div>
-                                    <button className='btn btn-primary bigB' >
+                                    <a href="#contact" className='btn btn-primary bigB' >
                                         
                                              <span className="top">Check it out!</span>
                                 <span className="bottom">Check it out!</span>
-                                        </button>
+                                        </a>
                                 </div>
                             </Col>
                             <Col md={6}>

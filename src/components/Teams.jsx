@@ -41,7 +41,7 @@ export default function Teams() {
                 </div>
             </div>
 
-            <div className="all_teams mt-4 pt-2" data-aos="fade-up" >
+            <div className="all_teams mt-4 pt-2 mb-2" data-aos="fade-up" >
                 <Row>
                     {
                         teams.map((item) => (
