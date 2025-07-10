@@ -1,0 +1,1223 @@
+@import './assets.scss';
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+$uniqueFont : "Bricolage Grotesque",
+sans-serif;
+
+*,
+html,
+body {
+    font-family: "Wix Madefor Display", sans-serif;
+}
+
+.unique {
+    position: relative;
+    color: $primaryCol;
+    font-family: $uniqueFont;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.btn {
+    transition: 0.2s all linear;
+    overflow: hidden;
+    position: relative;
+    min-width: 140px;
+    height: 45px;
+    
+    &>span {
+       position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease;
+      top:-1px;
+      left:0;
+    }
+
+    .bottom {
+        transform: translateY(100%);
+    }
+
+    &:hover{
+        .top{
+            transform: translateY(-100%);
+        }
+        .bottom{
+            transform: translateY(0);
+        }
+    }
+}
+
+.banner_section_style {
+    transition: 0.2s all linear;
+}
+
+.secction_blur {
+    filter: blur(1px);
+}
+
+.hideActive {
+    animation-name: hideBottomMenu !important;
+    transition: 0.2s all linear !important;
+    animation-iteration-count: 1 !important;
+    animation-direction: alternate !important;
+    animation-duration: 2s !important;
+}
+
+@keyframes hideBottomMenu {
+    0% {
+        transform: translate(-50%, 0px);
+        // top:0;
+    }
+
+    100% {
+        // top:500px;
+        transform: translate(-50%, 1000px);
+    }
+}
+
+.sm_unique {
+    color: $primaryCol !important;
+    font-family: $uniqueFont;
+    font-size: 43px;
+}
+
+.underline-svg {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    width: 100%;
+    height: 20px;
+}
+
+.underline-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.underline-svg path {
+    stroke: #2196f3;
+    stroke-width: 3;
+    fill: none;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawLine 5s ease forwards;
+    animation-fill-mode: forwards;
+    /* important to keep it visible */
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+body {
+    background: #000 !important;
+}
+
+.container {
+    // margin: 0px 50px!important;
+}
+
+.grayScale {
+    filter: grayscale(100%)
+}
+
+.sticky_section {
+    // background-attachment: fixed !important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.onTop {
+    position: relative;
+    z-index: 99;
+    background: #0D0D0D;
+    border: 1px solid #0D0D0D;
+    position: relative;
+
+    // &::before {
+    //     position: absolute;
+    //     content: '';
+    //     top: -2.1px;
+    //     left: -2.1px;
+    //     right: -2.1px;
+    //     bottom: -2.1px;
+    //     border: 5px solid #0D0D0D;
+    //     transition: 0.2s all linear;
+    // }
+
+
+}
+
+.form-group {
+    label {
+        color: $lightCol;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .form-control {
+        background: rgb(21, 21, 21);
+        border: none;
+        box-shadow: $shadow;
+        color: $lightCol;
+        font-size: 13px;
+
+        &:focus {
+            color: $lightCol;
+            background: rgb(21, 21, 21);
+            ;
+            box-shadow: $shadow;
+            outline: none;
+        }
+    }
+}
+
+.form_list {
+    .row {
+        gap: 20px;
+    }
+}
+
+
+
+.subHead {
+    color: $primaryCol;
+    border: 1px solid rgb(38, 38, 38);
+    border-radius: 100px;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 5px 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    background-color: #0D0D0D;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.bigT {
+    background-attachment: fixed !important;
+    font-size: 40px;
+    margin-bottom: 0px;
+    letter-spacing: -2px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.subText {
+    font-weight: 500;
+    font-size: 14px;
+    color: $lightCol;
+}
+
+.maxWith {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.upper_layer {
+    position: sticky;
+    top: 0;
+    background: #0D0D0D;
+    border-radius: 100px 100px 0px 0px;
+}
+
+.main_home_page {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0px;
+        position: relative;
+        z-index: 1;
+        transition: 0.2s all linear;
+                animation-iteration-count: 1;
+            animation-duration: 0.5s;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+        &.top_animation{
+            animation-name: topanimation;
+
+        }
+         @keyframes topanimation {
+                0% {
+                    transform:translateY(-1000px);
+                    
+                }
+                
+                100% {
+                    transform:translateY(0);
+
+                }
+
+            }
+        .logo {
+            img {
+                width: 200px;
+                height: 100%;
+            }
+        }
+
+        .menu {
+            ul {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 25px;
+
+                li {
+                    .menu_item {
+                        text-decoration: none;
+                        color: $white;
+                        font-size: 13px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        transition: 0.2s all linear;
+                        &:hover{
+                            color:$primaryCol;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.active {
+            position: fixed;
+            z-index: 99;
+            bottom: 20px;
+            left: 50%;
+            width: 700px;
+            transform: translateX(-50%);
+            border-radius: 100px;
+            padding: 15px 25px 15px 20px;
+            transition: 0.2s all linear;
+            background-color: rgba(29, 29, 29, 0.900);
+            box-shadow: $shadow;
+            animation-name: headerAnime;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+
+            @keyframes headerAnime {
+                0% {
+                    transform: translate(-50%, 100px);
+                    opacity: 0;
+
+                }
+
+                100% {
+                    transform: translate(-50%, 0px);
+                    opacity: 1;
+                }
+
+            }
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+
+
+
+    // Banner SASS Start
+    .topBar {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        transition: 0.2s all linear;
+
+        .banner_img {
+            background: url('../img/banner.jpg');
+            position: fixed;
+            background-attachment: fixed !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.2s all linear;
+        }
+
+        &.active {
+
+            // &::before {
+            .banner_img {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .banner_section {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bigB {
+            p {
+                line-height: 100px;
+                font-size: 65px;
+            }
+        }
+    }
+
+    // Banner SASS End
+
+    // Package SASS Start
+    .package {
+        .card {
+            background-color: transparent;
+            border: 1px solid;
+            box-shadow: '';
+            border-radius: 25px;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .subHead {
+            position: relative;
+            top: 18px;
+            z-index: 1;
+        }
+
+        .package_card {
+            position: relative;
+            .btn{
+                position: absolute;
+                left:50%;
+                transform: translateX(-50%);
+                bottom: 20px;
+                width: 85%;
+            }
+            .price {
+                border-bottom: 1px solid $border1;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0px;
+                margin: 10px 0px 30px 0px;
+                margin-bottom: 65px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+
+                    .icon {
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: $primaryCol;
+                        }
+                    }
+
+                    .text {
+                        color: $lightCol;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    // Package SASS End
+
+    // Features Card SASS Start
+    .features_card {
+        .item {
+            box-shadow: $shadow;
+            border-radius: 20px;
+            padding: 20px;
+            background: rgb(21, 21, 21);
+
+            .icon {
+                svg {
+                    height: 52px;
+                    width: 52px;
+                    color: $primaryCol;
+                }
+            }
+
+            .title {
+                margin-top: 18px;
+                font-size: 20px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $white;
+            }
+
+            .last_icon {
+                display: flex;
+                justify-content: end;
+                margin-top: 20px;
+
+                svg {
+                    height: 35px;
+                    width: 35px;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    // Features Card SASS End
+
+    // ALl Teams SASS Start
+    .all_teams {
+        .box {
+            box-shadow: $shadow;
+            border-radius: 20px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                transition: 0.2s all linear;
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+
+            .info {
+                margin-top: 20px;
+                text-align: center;
+
+                .name {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 22px;
+                }
+
+                .designation {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    // ALl Teams SASS End
+
+    // Portfolio Card SASS Start
+    .protfolio_card {
+        box-shadow: $shadow;
+        border: 1px solid $border1;
+        border-radius: 20px;
+        background: rgb(21, 21, 21);
+
+        img {
+            border-radius: 20px;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+    }
+
+    // Portfolio Card SASS End
+
+    // Process Section SASS Start
+    .stay_process {
+        .box {
+            box-shadow: $shadow;
+            border-radius: 20px;
+            padding: 30px;
+            background-color: rgb(21, 21, 21);
+
+            img {
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                box-shadow: $shadow;
+            }
+
+            .sideList {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                padding-left: 20px;
+
+                li {
+                    margin-bottom: 15px;
+                    padding-bottom: 22px;
+                    border-bottom: 1px solid $border1;
+
+                    &:last-child {
+                        padding-bottom: 0px;
+                        margin-bottom: 0px;
+                        border-bottom: 0px;
+                    }
+
+                    .heading {
+                        font-size: 22px;
+                        color: $white;
+                        font-weight: 700;
+                    }
+
+                    .subText {
+                        font-size: 13.7px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Process Section SASS End
+
+    // Services Section SASS Start
+    .services_div {
+        .subHead {
+            margin: unset;
+        }
+    }
+
+    .service_list {
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+
+            li {
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                .items {
+                    box-shadow: $shadow;
+                    padding: 20px;
+                    border-radius: 20px;
+                    position: relative;
+
+                    .icon {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+
+                        svg {
+                            color: $primaryCol;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Services Section SASS End
+
+    // FAQ SASS Start
+    .faq_list {
+
+        .border_line {
+            border: 1px solid $border1;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .accordion {
+            .accordion-item {
+                background-color: rgb(21, 21, 21);
+                // border: 1px solid $border1;
+                box-shadow: $shadow;
+                border-radius: 20px;
+                border: none;
+
+                .accordion-header {
+                    button {
+                        background-color: rgb(21, 21, 21);
+                        border: none;
+                        box-shadow: $shadow;
+                        color: $white;
+                        justify-content: space-between;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        font-size: 14px;
+
+                        &::after {
+                            content: none;
+                        }
+
+                        svg {
+                            color: $primaryCol;
+                            width: 17px;
+                            height: 17px;
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    background: rgb(21, 21, 21);
+                    color: $lightCol;
+                    font-size: 13.5px;
+                    border-radius: 0px 0px 25px 25px;
+                }
+            }
+        }
+    }
+
+    // FAQ SASS End
+
+    // Contact Us SASS Start
+    .contact_us {
+        .subHead {
+            // margin: unset !important;
+        }
+
+        .right_sight {
+            ul {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+    }
+
+    .form_list {
+        box-shadow: $shadow;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    // Contact Us SASS End
+
+    // Footer SASS Start
+    .footer {
+        position: relative;
+        padding: 100px 0px 50px 0px;
+        border-radius: 100px 100px 0px 0px;
+        background: rgb(21, 21, 21);
+        margin-top: 100px;
+
+        p {
+            margin-bottom: 0px;
+        }
+
+        .first {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .r_side {
+            img {
+                width: 500px;
+            }
+
+            .menu {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                .link {
+                    color: $white;
+                    text-decoration: none;
+                    transition: 0.2s all linear;
+                    font-size: 12px;
+                    margin-top: 30px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: $primaryCol;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .l_side {
+            min-width: 250px;
+
+            .box {
+                border-radius: 20px;
+                box-shadow: $shadow;
+
+                .top {
+                    padding: 20px;
+                    // padding-bottom: 0px;
+                    border-bottom: 1px solid $border1;
+                }
+
+                .bottom {
+                    padding: 20px;
+
+                    .social {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .link {
+                            svg {
+                                color: gray;
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .title {
+                    font-size: 14px;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    // Footer SASS End
+
+}
+
+
+@media (min-width: 1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1300px !important;
+    }
+}
+
+// Drag Images SASS Start
+.drag_img {
+    position: absolute;
+    top: 140px;
+    right: 180px;
+    z-index: 100;
+    width: 150px;
+    transition: transform 0.3s ease;
+    cursor: grab;
+
+    &.one {
+        animation-name: chilling;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+
+    }
+
+    &.twp {
+        top: unset;
+        bottom: 0;
+        width: 250px;
+        left: 29px;
+        animation-name: scaling;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+
+    &.three {
+        top: 100px;
+        right: 0;
+        width: 150px;
+    }
+}
+
+@keyframes chilling {
+    to {
+        transform: translateY(20px);
+    }
+
+    from {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes scaling {
+    to {
+        transform: scale(0.8);
+    }
+
+    from {
+        transform: scale(1);
+    }
+}
+
+/* Override to show native mouse cursor */
+// html, body, .__react-animated-cursor {
+//   cursor: auto !important;
+// }
+// Drag Images SASS End
+
+.mobile_toggle {
+    display: none;
+}
+
+.sm_logo {
+    display: none;
+}
+
+// Mobile Responsive SASS Start
+@media only screen and (max-width: 768px) {
+    .main_home_page .all_teams .box img {
+        filter: unset;
+    }
+    .btn{
+        width: 100%!important;
+    }
+
+    .protfolio_card {
+
+        margin-bottom: 10px;
+    }
+
+    .header {
+        .logo {
+            img {
+                width: 150px !important;
+            }
+        }
+
+        .mobile_toggle {
+            color: $white;
+            display: block;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .menu {
+            position: absolute;
+            top: 100px;
+            width: 100%;
+            left: 0;
+            height: 0px;
+            transition: 0.2s all linear !important;
+            overflow: hidden;
+            z-index: 99999;
+
+            ul {
+                border-radius: 24px;
+                transition: 0.2s all linear !important;
+                padding: 35px 0px !important;
+                background: rgb(33 33 33 / 97%);
+                // rgb(33 33 33 / 89%)
+                border: 1px solid $border1;
+                box-shadow: $shadow;
+                flex-direction: column;
+            }
+
+            &.showMenu {
+                transition: 0.2s all linear !important;
+                height: fit-content;
+                overflow: auto;
+            }
+        }
+
+        &.active {
+            bottom: 20px !important;
+            width: 90% !important;
+
+            .sm_logo {
+                display: block;
+                width: 30px !important;
+            }
+
+            .lg_logo {
+                display: none !important;
+            }
+
+            .mobile_toggle {
+                display: none !important;
+            }
+
+            .menu {
+                position: static;
+                height: fit-content;
+
+                ul {
+                    flex-direction: row !important;
+                    gap: 10px !important;
+                    padding: 2px 0px !important;
+                    background: none !important;
+                    box-shadow: none !important;
+                    border: none !important;
+                    justify-content: center;
+
+                    .menu_item {
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .unique {
+        font-size: 33px;
+    }
+
+    .subText {
+        font-size: 13.5px !important;
+    }
+
+    .bigT {
+        font-size: 30px;
+    }
+
+    .sm_unique {
+        font-size: 33px;
+    }
+
+    .banner_section {
+        .bigB {
+            p {
+                font-size: 30px !important;
+                line-height: 40px !important;
+            }
+        }
+    }
+
+    .btn {
+        padding: 10px 40px !important;
+    }
+
+    .package {
+        .row {
+            gap: 20px !important;
+        }
+    }
+
+    .all_teams {
+        .row {
+            gap: 20px !important;
+        }
+
+        .box {
+            .info {
+                .name {
+                    font-size: 18px !important;
+                }
+            }
+
+            img {
+                height: 200px !important;
+            }
+        }
+    }
+
+    .protfolio_card {
+        &>.row {
+            padding: 20px !important;
+        }
+
+        .content {
+            margin-bottom: 20px;
+
+            &>.d-flex {
+                flex-direction: column;
+
+                .subText {
+                    margin-bottom: 1px;
+                }
+
+                .primaryCol {
+                    font-size: 13.5px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .btn {
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+
+    .stay_process {
+        .box {
+            padding: 18px !important;
+
+            .sideList {
+                margin-top: 20px !important;
+                padding-left: 0px !important;
+
+                li {
+                    .heading {
+                        font-size: 18px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        border-radius: 50px 50px 0px 0px !important;
+        padding: 80px 0px 53px 0px !important;
+
+        .first {
+            flex-direction: column;
+
+            .r_side {
+                img {
+                    width: 200px !important;
+                }
+
+                .menu {
+                    flex-direction: column;
+                    gap: 0px;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .l_side {
+                .box {
+                    &>div {
+                        .title {
+                            text-align: center;
+                        }
+
+                        .d-flex {
+                            justify-content: center !important;
+                        }
+                    }
+
+                    .social {
+                        justify-content: center !important;
+                    }
+                }
+            }
+        }
+
+        .second {
+            margin-top: 0px !important;
+        }
+    }
+
+    .drag_img.twp {
+        width: 100px !important;
+    }
+
+    .drag_img.one {
+        right: 10px;
+        width: 75px !important;
+    }
+
+    .features_card {
+        &>.row {
+            gap: 20px !important;
+        }
+    }
+
+    .services_div {
+        .subHead {
+            margin: 0 auto !important;
+        }
+
+        .sticky_section {
+            text-align: center !important;
+
+            .subText {
+                padding: 0px !important;
+                ;
+                margin: 0px !important;
+                margin-bottom: 30px !important;
+            }
+        }
+    }
+
+    .sticky_section {
+        position: static;
+    }
+
+    .drag_img.three {
+        width: 60px !important;
+        top: 185px;
+
+    }
+
+    .container {
+        padding: 0px 20px !important;
+    }
+
+    .main_home_page .service_list ul li {
+        margin-bottom: 20px;
+    }
+
+    .protfolio_gap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+// Mobile Responsive SASS End
+
+
+.scrollUp {
+    position: fixed;
+    bottom: 12px;
+    right: 15px;
+    // background: $primaryCol;
+    border: 1px solid $border1;
+    box-shadow: $shadow;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    z-index: 100;
+    border-radius: 100px;
+    transition: 0.2s all linear;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.hideScroll {
+    opacity: 0;
+    visibility: hidden;
+}
