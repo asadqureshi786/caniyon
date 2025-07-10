@@ -1,6 +1,11 @@
 [build]
-command = "npm install && npm run build"
-publish = "dist"  # <-- Vite projects ka output 'dist' hota hai
+command = "npm run build --prefix client"
+publish = "client/build"
 
 [functions]
 directory = "netlify/functions"
+
+[[redirects]]
+from = "/.netlify/functions/*"
+to = "/.netlify/functions/:splat"
+status = 200
