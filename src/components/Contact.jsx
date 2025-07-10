@@ -27,6 +27,7 @@ export default function Contact() {
 
     async function sendForm(e) {
   e.preventDefault();
+//   e.preventDefault();
   setErrors({}); // Clear previous errors
 
   const res = await fetch('/.netlify/functions/sendEmail', {
