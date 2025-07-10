@@ -22,21 +22,22 @@ exports.handler = async function (event, context) {
 }
 
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
+    host: 'smtp.hostinger.com',
       port: 587,
       secure: false, // Use TLS
       auth: {
-        user: 'asad.next.action@gmail.com', // Replace with your Gmail
-        pass: 'pzdpvlqqdzxqsnpg', // Use App Password
+        user: 'mak@caniyon.com', // Replace with your Gmail
+        pass: 'Google2232@', // Use App Password
       },
+
     });
 
-    const mailOptions = {
-      from: 'asad.next.action@gmail.com',
-      to: 'asad.next.action@gmail.com',
+  const mailOptions = {
+      from: 'mak@caniyon.com',
+      to: 'hamdanbaig147@gmail.com',
       subject: subject || `New message from ${name}`,
       text: `From: ${name} <${email}>\n\n${message}`,
-    };
+    };
 
     await transporter.sendMail(mailOptions);
 
