@@ -60,7 +60,7 @@ export default function Contact() {
 
     return (
         <>
-            <Row className='pb-1 mt-5 pt-5 mb-4 justify-content-center' id="contact" >
+            <Row className='pb-1 ss mt-5 pt-5 mb-4 justify-content-center' id="contact" >
                 <Col md={6}>
                     <div className="contact_us" data-aos="fade-up" >
                         <div className="text-center">
