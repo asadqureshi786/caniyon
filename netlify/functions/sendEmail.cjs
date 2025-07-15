@@ -32,12 +32,7 @@ exports.handler = async function (event, context) {
 
     });
 
-  const mailOptions = {
-      from: 'mak@caniyon.com',
-      to: 'mak@caniyon.com',
-      subject: subject || `New message from ${name}`,
-      text: `From: ${name} <${email}>\n\n${message}`,
-    };
+gi
 
     await transporter.sendMail(mailOptions);
 
