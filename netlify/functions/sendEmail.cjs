@@ -32,7 +32,7 @@ exports.handler = async function (event, context) {
 
     });
 
-gi
+
 
     await transporter.sendMail(mailOptions);
 
