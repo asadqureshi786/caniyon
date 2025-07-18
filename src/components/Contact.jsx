@@ -119,8 +119,8 @@ export default function Contact() {
                                 </Col>
                                 <Col md={12}>
                                     <div class="d-flex justify-content-center mt-2">
-                                        {/* <button disabled={loader} className='btn btn-primary spinner' type="submit" > */}
-                                        <button  className='btn btn-primary spinner' type="submit" >
+                                        <button disabled={loader} className='btn btn-primary spinner' type="submit" >
+                                        {/* <button  className='btn btn-primary spinner' type="submit" > */}
 
 
 
