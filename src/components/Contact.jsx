@@ -5,6 +5,9 @@ import { Row, Col } from 'react-bootstrap';
 import React, { useState } from 'react';
 // import axios from "axios";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 export default function Contact() {
@@ -16,6 +19,7 @@ export default function Contact() {
         message: '',
     });
     const [errors, setErrors] = useState({});
+    const [loader, setLoader] = useState(false);
 
     function setValue(e){
         const {name, value} = e.target;
@@ -26,9 +30,9 @@ export default function Contact() {
 
 
     async function sendForm(e) {
-  e.preventDefault();
-//   e.preventDefault();
-  setErrors({}); // Clear previous errors
+    e.preventDefault();
+    setErrors({}); 
+    setLoader(true)
 
   const res = await fetch('/.netlify/functions/sendEmail', {
     method: 'POST',
@@ -37,18 +41,28 @@ export default function Contact() {
     },
     body: JSON.stringify(formData),
   });
-
+  console.log(res)
   const data = await res.json();
   console.log(data);
 
   if (res.ok) {
+    setLoader(false)
+      toast.success('Your message has been sent!', {
+        position: 'top-right',
+        autoClose: 130000,
+        pauseOnHover: true,
+        draggable: true,
+      });
     setFormData({ name: '', email: '', subject: '', message: '' });
   } else {
     // If validation errors, update error state
+    setLoader(false)
     if (data.fields) {
+      setLoader(false)
       setErrors(data.fields);
     } else {
       // Generic error
+      setLoader(false)
       setErrors({ global: data.message || 'Something went wrong.' });
     }
   }
@@ -84,39 +98,48 @@ export default function Contact() {
                                 </Col>
                                 <Col md={12}>
                                     <div className="form-group">
-  <label>Email</label>
-  <input type="email" name="email" onChange={setValue} value={formData.email} className="form-control" />
-  {errors.email && <div className="text-danger">{errors.email}</div>}
-</div>
+                                      <label>Email</label>
+                                      <input type="email" name="email" onChange={setValue} value={formData.email} className="form-control" />
+                                      {errors.email && <div className="text-danger">{errors.email}</div>}
+                                    </div>
                                 </Col>
                                 <Col md={12}>
                                     <div className="form-group">
-  <label>Subject</label>
-  <input type="text" name="subject" onChange={setValue} value={formData.subject} className="form-control" />
-  {errors.subject && <div className="text-danger">{errors.subject}</div>}
-</div>
+                                      <label>Subject</label>
+                                      <input type="text" name="subject" onChange={setValue} value={formData.subject} className="form-control" />
+                                      {errors.subject && <div className="text-danger">{errors.subject}</div>}
+                                    </div>
                                 </Col>
                                 <Col md={12}>
                                     <div className="form-group">
-  <label>Message</label>
-  <textarea rows={6} name="message" onChange={setValue} value={formData.message} className="form-control" ></textarea>
-  {errors.message && <div className="text-danger">{errors.message}</div>}
-</div>
+                                      <label>Message</label>
+                                      <textarea rows={6} name="message" onChange={setValue} value={formData.message} className="form-control" ></textarea>
+                                      {errors.message && <div className="text-danger">{errors.message}</div>}
+                                    </div>
                                 </Col>
                                 <Col md={12}>
                                     <div class="d-flex justify-content-center mt-2">
-                                        <button className='btn btn-primary' type="submit" >
+                                        {/* <button disabled={loader} className='btn btn-primary spinner' type="submit" > */}
+                                        <button  className='btn btn-primary spinner' type="submit" >
+
+
+
+                                           <div class={`spinner-border text-secondary ${loader ? 'show' : ''}`} role="status">
+                                              <span class="visually-hidden">Loading...</span>
+                                            </div>
                                             <span class="top">Submit</span>
                                             <span class="bottom">Submit</span>
                                         </button>
                                     </div>
                                 </Col>
                             </Row>
+
                         </form>
                     </div>
                 </Col>
 
             </Row>
+                                  <ToastContainer />
         </>
     )
 }
