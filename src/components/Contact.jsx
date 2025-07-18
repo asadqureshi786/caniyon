@@ -49,7 +49,7 @@ export default function Contact() {
     setLoader(false)
       toast.success('Your message has been sent!', {
         position: 'top-right',
-        autoClose: 130000,
+        autoClose: 3000,
         pauseOnHover: true,
         draggable: true,
       });
